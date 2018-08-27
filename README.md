@@ -249,6 +249,8 @@ The last statement is the "empty line" that results in a print out to the stdout
 }
 ```
 
+**Important:** If no `LastExpression` is defined, the integer value `0` will be used.
+
 ## How to start
 
 ### Installation
