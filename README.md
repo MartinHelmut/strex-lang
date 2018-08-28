@@ -34,9 +34,23 @@ if = 7 (+ 5) | (- 4)
 
 * **Signed and unsigned integer** (e.g. `-3`, `0`, `23`)
     * Can be used as literal
+* **Signed and unsigned float** (e.g. `-3.2`, `0.1`, `23.9`)
+    * Can be used as literal
 * **Implicit boolean** (`true` and `false`)
     * Can not be used as literal
     * Is only be used for compare results in `if`-statements
+
+#### Operator
+
+* `+` - Math operator for addition (works with Integer and Float)
+* `-` - Math operator for subtraction (works with Integer and Float)
+* `*` - Math operator for multiplication (works with Integer and Float)
+* `/` - Math operator for division (works with Integer and Float)
+* `|` - "Or" (alternate/pipe) operator (works with implicit boolean)
+* `&` - "And" (consequent) operator (works with implicit boolean)
+* `=` - Equals operator (works with Integer and Float to compare value)
+* `>` - Greater-than operator (works with Integer and Float to compare value)
+* `<` - Less-than operator (works with Integer and Float to compare value)
 
 #### calculation
 
@@ -66,11 +80,18 @@ Example for false case:
 if = 5 (+ 3) | (- 3) // Last expression is 4, therefore false, calculate `4 - 3`.
 ```
 
-If-statements can use any expression to compare and can also be combined with the pipe-operator (or) `|`. E.g.:
+If-statements can use any expression to compare and can also be combined with the pipe-operator (or) `|` and the "and" operator `&`. E.g.:
 
 ```
+// Or
 4
 if > 2 + 1 | < 4 (+ 1) | (- 1) // Result is 5
+```
+
+```
+// And
+4
+if < 5 & > 1 (+ 1) | (- 1) // Result is 5
 ```
 
 ### AST
