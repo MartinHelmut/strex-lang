@@ -4,7 +4,7 @@ const parser = require('../../parser');
 describe('parser > types > float', () => {
     describe('basic literal', () => {
         test('creates a float expression for the last expression', () => {
-            const code = `- 2.1`;
+            const code = `- 20.1`;
             const ast = parser(code);
             const expected = {
                 body: [
@@ -15,7 +15,7 @@ describe('parser > types > float', () => {
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '2.1',
+                            value: '20.1',
                         },
                         operator: '-',
                     },
@@ -65,7 +65,7 @@ describe('parser > types > float', () => {
 
     describe('without braces', () => {
         test('creates a float expression with + operator', () => {
-            const code = `2.1 + 5.4`;
+            const code = `24811.1 + 5.4`;
             const ast = parser(code);
             const expected = {
                 body: [
@@ -73,7 +73,7 @@ describe('parser > types > float', () => {
                         type: 'Expression',
                         left: {
                             type: 'FloatLiteral',
-                            value: '2.1',
+                            value: '24811.1',
                         },
                         right: {
                             type: 'FloatLiteral',
@@ -87,16 +87,16 @@ describe('parser > types > float', () => {
             expect(ast).toEqual(expected);
         });
 
-        test('creates an float expression with + operator without whitespace', () => {
-            const code = `2.1+5.4`;
+        test('creates a float expression with + operator without whitespace', () => {
+            const code = `24811.1+5.4`;
             const ast = parser(code);
             const expected = {
                 body: [
                     {
                         type: 'Expression',
                         left: {
-                            type: 'IntegerLiteral',
-                            value: '2.1',
+                            type: 'FloatLiteral',
+                            value: '24811.1',
                         },
                         right: {
                             type: 'IntegerLiteral',
@@ -573,11 +573,139 @@ describe('parser > types > float', () => {
             expect(ast).toEqual(expected);
         });
 
-        test('throws an error if right hand expression is missing for float', () => {
-            const code = `3.1 *`;
+        test('throws an error on leading zero for float', () => {
+            const code = `04.1`;
+            expect(() => parser(code)).toThrow(
+                'Leading zero on float values is not allowed in line 1'
+            );
+        });
+
+        test('throws an error on multiple leading zero for float', () => {
+            const code = `00004.678`;
+            expect(() => parser(code)).toThrow(
+                'Leading zero on float values is not allowed in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on + operator is missing for float', () => {
+            const code = `3.1 +`;
             expect(() => parser(code)).toThrow(
                 'Missing left hand expression in line 1'
             );
+        });
+
+        test('throws an error if right hand expression on - operator is missing for float', () => {
+            const code = `0.001 -`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on * operator is missing for float', () => {
+            const code = `9.9 *`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on / operator is missing for float', () => {
+            const code = `9.9999999999999999 /`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on multiple operator is missing for float [1]', () => {
+            const code = `1.2 + 4.6 -`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on multiple operator is missing for float [2]', () => {
+            const code = `1.2 + 4.6 - 4.2 *`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on multiple operator is missing for float [3]', () => {
+            const code = `1.2 + 3.0 /`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on multiple operator is missing for float [4]', () => {
+            const code = `2.2 + 3.1 +`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        // @todo
+        test('throws an error if float is missing on two + operations', () => {
+            const code = `1.1 + + 2.4`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if float is missing on two + operations without whitespace', () => {
+            const code = `1.1++2.4`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if float is missing on two - operations', () => {
+            const code = `10.00 - - 30.00`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if float is missing on two - operations without whitespace', () => {
+            const code = `10.00--30.00`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if float is missing on two * operations', () => {
+            const code = `0.3 * * 1.1`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if float is missing on two * operations without whitespace', () => {
+            const code = `0.3**1.1`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if float is missing on two / operations', () => {
+            const code = `36.45 / / 6.66`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws no error if float is missing on two / operations without whitespace because it is interpreted as comment', () => {
+            const code = `36.45//6.66`;
+            const ast = parser(code);
+            const expected = {
+                body: [
+                    {
+                        type: 'FloatLiteral',
+                        value: '36.45',
+                    },
+                ],
+            };
+
+            expect(ast).toEqual(expected);
         });
     });
 });

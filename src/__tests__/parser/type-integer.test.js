@@ -573,11 +573,138 @@ describe('parser > types > integer', () => {
             expect(ast).toEqual(expected);
         });
 
-        test('throws an error if right hand expression is missing for integer', () => {
-            const code = `3 *`;
+        test('throws an error on leading zero for integer', () => {
+            const code = `03`;
+            expect(() => parser(code)).toThrow(
+                'Leading zero on integer values is not allowed in line 1'
+            );
+        });
+
+        test('throws an error on multiple leading zero for integer', () => {
+            const code = `000045`;
+            expect(() => parser(code)).toThrow(
+                'Leading zero on integer values is not allowed in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on + operator is missing for integer', () => {
+            const code = `3 +`;
             expect(() => parser(code)).toThrow(
                 'Missing left hand expression in line 1'
             );
+        });
+
+        test('throws an error if right hand expression on - operator is missing for integer', () => {
+            const code = `1 -`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on * operator is missing for integer', () => {
+            const code = `18754 *`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on / operator is missing for integer', () => {
+            const code = `9999999999999999 /`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on multiple operator is missing for integer [1]', () => {
+            const code = `2 + 6 -`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on multiple operator is missing for integer [2]', () => {
+            const code = `58 + 10004 - 2 *`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on multiple operator is missing for integer [3]', () => {
+            const code = `12 + 987 /`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if right hand expression on multiple operator is missing for integer [4]', () => {
+            const code = `22 + 31 +`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if integer is missing on two + operations', () => {
+            const code = `1 + + 2`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if integer is missing on two + operations without whitespace', () => {
+            const code = `1++2`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if integer is missing on two - operations', () => {
+            const code = `1000 - - 3000`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if integer is missing on two - operations without whitespace', () => {
+            const code = `1000--3000`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if integer is missing on two * operations', () => {
+            const code = `3 * * 1`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if integer is missing on two * operations without whitespace', () => {
+            const code = `3**1`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws an error if integer is missing on two / operations', () => {
+            const code = `36 / / 6`;
+            expect(() => parser(code)).toThrow(
+                'Missing left hand expression in line 1'
+            );
+        });
+
+        test('throws no error if integer is missing on two / operations without whitespace because it is interpreted as comment', () => {
+            const code = `36//6`;
+            const ast = parser(code);
+            const expected = {
+                body: [
+                    {
+                        type: 'IntegerLiteral',
+                        value: '36',
+                    },
+                ],
+            };
+
+            expect(ast).toEqual(expected);
         });
     });
 });
