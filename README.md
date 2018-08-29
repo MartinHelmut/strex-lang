@@ -15,7 +15,7 @@ Goal of this task is to create as [AST](https://en.wikipedia.org/wiki/Abstract_s
 ```
 // This is a comment
 4 + 3
-if = 7 (+ 5) | (- 4)
+= 7 ? + 5 : - 4
 - 2
 
 ```
@@ -56,42 +56,44 @@ if = 7 (+ 5) | (- 4)
 
 Only base arithmetic is used: `+ - * /` with integer values.
 
-#### if-statements
+#### if-expression
 
-If-statements start with an `if` and a compare operator:
+**Defined as:** `<compare-operator> <expression> ? <expression> : <expression>`
 
-* `=` equals
-* `>` larger than
-* `<` smaller than
-
-to compare against an expression. It uses the last evaluated expression for the comparison. The first in braces included expression is the true case and works with the last evaluated expression. The pipe-operator `|` (or) is the else case and and gets also the last expression to work with if the `if`-case is false.
+If-expression start with a compare operator `=`, `>` or `<` and sets the if case with `?` and the else with `:` to compare against an expression. It uses the last evaluated expression for the comparison. The first expression after `?` is the true case and works with the last evaluated expression. The `:` indicates the else case and gets also the last expression to work with if the if-case is false.
 
 Example for true case:
 
 ```
 5
-if = 5 (+ 3) | (- 3) // Last expression is 5, therefore true, calculate `5 + 3`.
+= 5 ? + 3 : - 3 // Last expression is 5, therefore true, calculate `5 + 3`.
 ```
 
 Example for false case:
 
 ```
 4
-if = 5 (+ 3) | (- 3) // Last expression is 4, therefore false, calculate `4 - 3`.
+= 5 ? + 3 : - 3 // Last expression is 4, therefore false, calculate `4 - 3`.
 ```
 
-If-statements can use any expression to compare and can also be combined with the pipe-operator (or) `|` and the "and" operator `&`. E.g.:
+If-expressions can use any expression to compare and can also be combined with the pipe-operator (or) `|` and the "and" operator `&`. E.g.:
 
 ```
 // Or
 4
-if > 2 + 1 | < 4 (+ 1) | (- 1) // Result is 5
+> 2 + 1 | < 4 ? + 1 : - 1 // Result is 5
 ```
 
 ```
 // And
 4
-if < 5 & > 1 (+ 1) | (- 1) // Result is 5
+< 5 & > 1 ? + 1 : - 1 // Result is 5
+```
+
+It is also possible to omit the "else" case, therefore `LastExpression` will be used implicit as else:
+
+```
+= 0 ? + 1
 ```
 
 ### AST
@@ -101,7 +103,7 @@ Like mentioned the goal is to produce an abstract syntax tree with the `parse` f
 ```
 // This is a comment
 4 + 3
-if = 7 (+ 5) | (- 4)
+= 7 ? + 5 : - 4
 - 2
 
 ```
@@ -112,7 +114,7 @@ the resulting AST would look like the following (defined as JSON):
 {
     "body": [
         {
-            "type": "Expression",
+            "type": "BinaryExpression",
             "left": {
                 "type": "IntegerLiteral",
                 "value": "4"
@@ -124,9 +126,9 @@ the resulting AST would look like the following (defined as JSON):
             "operator": "+"
         },
         {
-            "type": "IfStatement",
+            "type": "IfExpression",
             "test": {
-                "type": "Expression",
+                "type": "BinaryExpression",
                 "left": {
                     "type": "LastExpression"
                 },
@@ -137,7 +139,7 @@ the resulting AST would look like the following (defined as JSON):
                 "operator": "="
             },
             "consequent": {
-                "type": "Expression",
+                "type": "BinaryExpression",
                 "left": {
                     "type": "LastExpression"
                 },
@@ -148,7 +150,7 @@ the resulting AST would look like the following (defined as JSON):
                 "operator": "+"
             },
             "alternate": {
-                "type": "Expression",
+                "type": "BinaryExpression",
                 "left": {
                     "type": "LastExpression"
                 },
@@ -160,7 +162,7 @@ the resulting AST would look like the following (defined as JSON):
             }
         },
         {
-            "type": "Expression",
+            "type": "BinaryExpression",
             "left": {
                 "type": "LastExpression"
             },
@@ -189,7 +191,7 @@ The `body` array contains any defined statement and expression of the program li
 
 ```json
 {
-    "type": "Expression",
+    "type": "BinaryExpression",
     "left": {
         "type": "IntegerLiteral",
         "value": "4"
@@ -202,13 +204,13 @@ The `body` array contains any defined statement and expression of the program li
 }
 ```
 
-Values can be right or left hand defined to the operator. Like seen above, the AST does not represent any evaluation. It only defines the source code in a different, standardized, format. The following `if`-statement is a bit more complex, but let's break it down:
+Values can be right or left hand defined to the operator. Like seen above, the AST does not represent any evaluation. It only defines the source code in a different, standardized, format. The following if-expression is a bit more complex, but let's break it down:
 
 ```json
 {
-    "type": "IfStatement",
+    "type": "IfExpression",
     "test": {
-        "type": "Expression",
+        "type": "BinaryExpression",
         "left": {
             "type": "LastExpression"
         },
@@ -223,14 +225,14 @@ Values can be right or left hand defined to the operator. Like seen above, the A
 }
 ```
 
-The `if`-statement contains a test to determine if the result is `true` ("consequent") or `false` ("alternate"). The test itself is an expression again, but this time the left hand operation is the `LastExpression`. The "consequent" is an expression again:
+The if-expression contains a test to determine if the result is `true` ("consequent") or `false` ("alternate"). The test itself is an expression again, but this time the left hand operation is the `LastExpression`. The "consequent" is an expression again:
 
 ```json
 {
-    "type": "IfStatement",
+    "type": "IfExpression",
     "test": {...},
     "consequent": {
-        "type": "Expression",
+        "type": "BinaryExpression",
         "left": {
             "type": "LastExpression"
         },
@@ -244,13 +246,13 @@ The `if`-statement contains a test to determine if the result is `true` ("conseq
 }
 ```
 
-That would use the last expression as a left hand operation and an integer value as right hand. Alternate works the same that the last expression is used as left hand operation.
+That would use the last expression as a left hand operation and an integer value as right hand. Alternate works the same that the last expression is used as left hand operation. If no "alternate" is provided `LastExpression` is used.
 
 The next line uses the last expression as left hand to assign the operator `-` with the integer literal `2`:
 
 ```json
 {
-    "type": "Expression",
+    "type": "BinaryExpression",
     "left": {
         "type": "LastExpression"
     },
