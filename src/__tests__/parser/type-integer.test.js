@@ -9,7 +9,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'LastExpression',
                         },
@@ -31,7 +31,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'LastExpression',
                         },
@@ -70,7 +70,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '2',
@@ -93,7 +93,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '2',
@@ -116,7 +116,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '1',
@@ -139,7 +139,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '1',
@@ -162,7 +162,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '36',
@@ -185,7 +185,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '36',
@@ -208,7 +208,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '10',
@@ -231,7 +231,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '10',
@@ -256,9 +256,9 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '5',
@@ -287,9 +287,9 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '5',
@@ -318,15 +318,15 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '2',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'IntegerLiteral',
                                     value: '3',
@@ -357,15 +357,15 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '2',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'IntegerLiteral',
                                     value: '3',
@@ -396,13 +396,13 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '2',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '2',
@@ -427,13 +427,13 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '2',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '2',
@@ -460,15 +460,15 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '1',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'IntegerLiteral',
                                     value: '2',
@@ -482,7 +482,7 @@ describe('parser > types > integer', () => {
                             operator: '+',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '4',
@@ -507,15 +507,15 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '1',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'IntegerLiteral',
                                     value: '2',
@@ -529,7 +529,7 @@ describe('parser > types > integer', () => {
                             operator: '+',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '4',
@@ -556,7 +556,7 @@ describe('parser > types > integer', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '1',

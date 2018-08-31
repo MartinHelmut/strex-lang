@@ -9,7 +9,7 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '2',
@@ -32,7 +32,7 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '2',
@@ -55,7 +55,7 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '1.11',
@@ -78,7 +78,7 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '1.11',
@@ -101,7 +101,7 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '98',
@@ -124,7 +124,7 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '98',
@@ -147,7 +147,7 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '100',
@@ -170,7 +170,7 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '100',
@@ -195,9 +195,9 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '5',
@@ -226,9 +226,9 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '5',
@@ -257,15 +257,15 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '2',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'FloatLiteral',
                                     value: '3.2',
@@ -296,15 +296,15 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '2',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'FloatLiteral',
                                     value: '3.2',
@@ -335,13 +335,13 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '2',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '0.1',
@@ -366,13 +366,13 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '2',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '0.1',
@@ -399,15 +399,15 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '1',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'FloatLiteral',
                                     value: '2.2',
@@ -421,7 +421,7 @@ describe('parser > types > combined', () => {
                             operator: '+',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '4.4',
@@ -446,15 +446,15 @@ describe('parser > types > combined', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
                                 value: '1',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'FloatLiteral',
                                     value: '2.2',
@@ -468,7 +468,7 @@ describe('parser > types > combined', () => {
                             operator: '+',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '4.4',

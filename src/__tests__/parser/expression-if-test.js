@@ -2084,7 +2084,7 @@ describe('parser > expressions > if', () => {
                         test: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2095,7 +2095,7 @@ describe('parser > expressions > if', () => {
                                 operator: '<',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2124,9 +2124,9 @@ describe('parser > expressions > if', () => {
                     {
                         type: 'IfExpression',
                         test: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2137,7 +2137,7 @@ describe('parser > expressions > if', () => {
                                 operator: '>',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2150,7 +2150,7 @@ describe('parser > expressions > if', () => {
                             operator: '&',
                         },
                         consequent: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2161,7 +2161,7 @@ describe('parser > expressions > if', () => {
                             operator: '+',
                         },
                         alternate: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2186,9 +2186,9 @@ describe('parser > expressions > if', () => {
                     {
                         type: 'IfExpression',
                         test: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2199,7 +2199,7 @@ describe('parser > expressions > if', () => {
                                 operator: '>',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2212,7 +2212,7 @@ describe('parser > expressions > if', () => {
                             operator: '&',
                         },
                         consequent: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2223,7 +2223,7 @@ describe('parser > expressions > if', () => {
                             operator: '+',
                         },
                         alternate: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2248,9 +2248,9 @@ describe('parser > expressions > if', () => {
                     {
                         type: 'IfExpression',
                         test: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2261,7 +2261,7 @@ describe('parser > expressions > if', () => {
                                 operator: '>',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2274,7 +2274,7 @@ describe('parser > expressions > if', () => {
                             operator: '&',
                         },
                         consequent: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2285,7 +2285,7 @@ describe('parser > expressions > if', () => {
                             operator: '+',
                         },
                         alternate: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2310,9 +2310,9 @@ describe('parser > expressions > if', () => {
                     {
                         type: 'IfExpression',
                         test: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2323,7 +2323,7 @@ describe('parser > expressions > if', () => {
                                 operator: '>',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2336,7 +2336,7 @@ describe('parser > expressions > if', () => {
                             operator: '&',
                         },
                         consequent: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2347,7 +2347,7 @@ describe('parser > expressions > if', () => {
                             operator: '+',
                         },
                         alternate: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2372,9 +2372,9 @@ describe('parser > expressions > if', () => {
                     {
                         type: 'IfExpression',
                         test: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2385,9 +2385,9 @@ describe('parser > expressions > if', () => {
                                 operator: '=',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
@@ -2398,12 +2398,12 @@ describe('parser > expressions > if', () => {
                                     operator: '>',
                                 },
                                 right: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
                                     right: {
-                                        type: 'Expression',
+                                        type: 'BinaryExpression',
                                         left: {
                                             type: 'LastExpression',
                                         },
@@ -2420,7 +2420,7 @@ describe('parser > expressions > if', () => {
                             operator: '&',
                         },
                         consequent: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2431,7 +2431,7 @@ describe('parser > expressions > if', () => {
                             operator: '+',
                         },
                         alternate: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2456,9 +2456,9 @@ describe('parser > expressions > if', () => {
                     {
                         type: 'IfExpression',
                         test: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2469,9 +2469,9 @@ describe('parser > expressions > if', () => {
                                 operator: '=',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
@@ -2482,12 +2482,12 @@ describe('parser > expressions > if', () => {
                                     operator: '>',
                                 },
                                 right: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
                                     right: {
-                                        type: 'Expression',
+                                        type: 'BinaryExpression',
                                         left: {
                                             type: 'LastExpression',
                                         },
@@ -2504,7 +2504,7 @@ describe('parser > expressions > if', () => {
                             operator: '&',
                         },
                         consequent: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2515,7 +2515,7 @@ describe('parser > expressions > if', () => {
                             operator: '+',
                         },
                         alternate: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2540,9 +2540,9 @@ describe('parser > expressions > if', () => {
                     {
                         type: 'IfExpression',
                         test: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2553,9 +2553,9 @@ describe('parser > expressions > if', () => {
                                 operator: '=',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
@@ -2566,12 +2566,12 @@ describe('parser > expressions > if', () => {
                                     operator: '>',
                                 },
                                 right: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
                                     right: {
-                                        type: 'Expression',
+                                        type: 'BinaryExpression',
                                         left: {
                                             type: 'LastExpression',
                                         },
@@ -2588,7 +2588,7 @@ describe('parser > expressions > if', () => {
                             operator: '&',
                         },
                         consequent: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2599,7 +2599,7 @@ describe('parser > expressions > if', () => {
                             operator: '+',
                         },
                         alternate: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2624,9 +2624,9 @@ describe('parser > expressions > if', () => {
                     {
                         type: 'IfExpression',
                         test: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2637,9 +2637,9 @@ describe('parser > expressions > if', () => {
                                 operator: '=',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
@@ -2650,12 +2650,12 @@ describe('parser > expressions > if', () => {
                                     operator: '>',
                                 },
                                 right: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
                                     right: {
-                                        type: 'Expression',
+                                        type: 'BinaryExpression',
                                         left: {
                                             type: 'LastExpression',
                                         },
@@ -2672,7 +2672,7 @@ describe('parser > expressions > if', () => {
                             operator: '&',
                         },
                         consequent: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2683,7 +2683,7 @@ describe('parser > expressions > if', () => {
                             operator: '+',
                         },
                         alternate: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2708,9 +2708,9 @@ describe('parser > expressions > if', () => {
                     {
                         type: 'IfExpression',
                         test: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2721,9 +2721,9 @@ describe('parser > expressions > if', () => {
                                 operator: '=',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
@@ -2734,12 +2734,12 @@ describe('parser > expressions > if', () => {
                                     operator: '>',
                                 },
                                 right: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
                                     right: {
-                                        type: 'Expression',
+                                        type: 'BinaryExpression',
                                         left: {
                                             type: 'LastExpression',
                                         },
@@ -2756,7 +2756,7 @@ describe('parser > expressions > if', () => {
                             operator: '&',
                         },
                         consequent: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2767,7 +2767,7 @@ describe('parser > expressions > if', () => {
                             operator: '+',
                         },
                         alternate: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2792,9 +2792,9 @@ describe('parser > expressions > if', () => {
                     {
                         type: 'IfExpression',
                         test: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'LastExpression',
                                 },
@@ -2805,9 +2805,9 @@ describe('parser > expressions > if', () => {
                                 operator: '=',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
@@ -2818,12 +2818,12 @@ describe('parser > expressions > if', () => {
                                     operator: '>',
                                 },
                                 right: {
-                                    type: 'Expression',
+                                    type: 'BinaryExpression',
                                     left: {
                                         type: 'LastExpression',
                                     },
                                     right: {
-                                        type: 'Expression',
+                                        type: 'BinaryExpression',
                                         left: {
                                             type: 'LastExpression',
                                         },
@@ -2840,7 +2840,7 @@ describe('parser > expressions > if', () => {
                             operator: '&',
                         },
                         consequent: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },
@@ -2851,7 +2851,7 @@ describe('parser > expressions > if', () => {
                             operator: '+',
                         },
                         alternate: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'LastExpression',
                             },

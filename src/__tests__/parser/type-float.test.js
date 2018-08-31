@@ -9,7 +9,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'LastExpression',
                         },
@@ -31,7 +31,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'LastExpression',
                         },
@@ -70,7 +70,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '24811.1',
@@ -93,7 +93,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '24811.1',
@@ -116,7 +116,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '1.1',
@@ -139,7 +139,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '1.1',
@@ -162,7 +162,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '36.456',
@@ -185,7 +185,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '36.456',
@@ -208,7 +208,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '10.0',
@@ -231,7 +231,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '10.0',
@@ -256,9 +256,9 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '5.6',
@@ -287,9 +287,9 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '5.6',
@@ -318,15 +318,15 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '2.2',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'FloatExpression',
                                     value: '2.1',
@@ -357,15 +357,15 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '2.2',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'FloatExpression',
                                     value: '2.1',
@@ -396,13 +396,13 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '2.2',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '2.1',
@@ -427,13 +427,13 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
                             value: '2.2',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '2.1',
@@ -460,15 +460,15 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '1.1',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'FloatLiteral',
                                     value: '2.2',
@@ -482,7 +482,7 @@ describe('parser > types > float', () => {
                             operator: '+',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '4.4',
@@ -507,15 +507,15 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '1.1',
                             },
                             right: {
-                                type: 'Expression',
+                                type: 'BinaryExpression',
                                 left: {
                                     type: 'FloatLiteral',
                                     value: '2.2',
@@ -529,7 +529,7 @@ describe('parser > types > float', () => {
                             operator: '+',
                         },
                         right: {
-                            type: 'Expression',
+                            type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
                                 value: '4.4',
@@ -556,7 +556,7 @@ describe('parser > types > float', () => {
             const expected = {
                 body: [
                     {
-                        type: 'Expression',
+                        type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
                             value: '1',
