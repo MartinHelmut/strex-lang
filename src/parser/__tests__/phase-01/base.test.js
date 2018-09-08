@@ -7,7 +7,7 @@ describe('parser > base', () => {
             const ast = parser(code);
             const expected = {
                 type: 'Program',
-                body: [],
+                body: []
             };
 
             expect(ast).toEqual(expected);
@@ -28,9 +28,9 @@ describe('parser > base', () => {
                 body: [
                     {
                         type: 'PrintOut',
-                        value: {type: 'LastExpression'},
-                    },
-                ],
+                        value: { type: 'LastExpression' }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -44,9 +44,9 @@ describe('parser > base', () => {
                 body: [
                     {
                         type: 'PrintOut',
-                        value: {type: 'LastExpression'},
-                    },
-                ],
+                        value: { type: 'LastExpression' }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);

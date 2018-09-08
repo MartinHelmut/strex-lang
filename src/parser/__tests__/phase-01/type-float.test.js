@@ -12,15 +12,15 @@ describe('parser > types > float', () => {
                     {
                         type: 'BinaryExpression',
                         left: {
-                            type: 'LastExpression',
+                            type: 'LastExpression'
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '20.1',
+                            value: '20.1'
                         },
-                        operator: '-',
-                    },
-                ],
+                        operator: '-'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -35,15 +35,15 @@ describe('parser > types > float', () => {
                     {
                         type: 'BinaryExpression',
                         left: {
-                            type: 'LastExpression',
+                            type: 'LastExpression'
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '5.5',
+                            value: '5.5'
                         },
-                        operator: '-',
-                    },
-                ],
+                        operator: '-'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -57,9 +57,9 @@ describe('parser > types > float', () => {
                 body: [
                     {
                         type: 'FloatLiteral',
-                        value: '3.003332',
-                    },
-                ],
+                        value: '3.003332'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -82,15 +82,15 @@ describe('parser > types > float', () => {
                         type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
-                            value: '24811.1',
+                            value: '24811.1'
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '5.4',
+                            value: '5.4'
                         },
-                        operator: '+',
-                    },
-                ],
+                        operator: '+'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -106,15 +106,15 @@ describe('parser > types > float', () => {
                         type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
-                            value: '24811.1',
+                            value: '24811.1'
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '5.4',
+                            value: '5.4'
                         },
-                        operator: '+',
-                    },
-                ],
+                        operator: '+'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -130,15 +130,15 @@ describe('parser > types > float', () => {
                         type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
-                            value: '1.1',
+                            value: '1.1'
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '45.56',
+                            value: '45.56'
                         },
-                        operator: '-',
-                    },
-                ],
+                        operator: '-'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -154,15 +154,15 @@ describe('parser > types > float', () => {
                         type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
-                            value: '1.1',
+                            value: '1.1'
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '45.56',
+                            value: '45.56'
                         },
-                        operator: '-',
-                    },
-                ],
+                        operator: '-'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -178,15 +178,15 @@ describe('parser > types > float', () => {
                         type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
-                            value: '36.456',
+                            value: '36.456'
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '6.0',
+                            value: '6.0'
                         },
-                        operator: '/',
-                    },
-                ],
+                        operator: '/'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -202,15 +202,15 @@ describe('parser > types > float', () => {
                         type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
-                            value: '36.456',
+                            value: '36.456'
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '6.0',
+                            value: '6.0'
                         },
-                        operator: '/',
-                    },
-                ],
+                        operator: '/'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -226,15 +226,15 @@ describe('parser > types > float', () => {
                         type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
-                            value: '10.0',
+                            value: '10.0'
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '3.3',
+                            value: '3.3'
                         },
-                        operator: '*',
-                    },
-                ],
+                        operator: '*'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -250,15 +250,15 @@ describe('parser > types > float', () => {
                         type: 'BinaryExpression',
                         left: {
                             type: 'FloatLiteral',
-                            value: '10.0',
+                            value: '10.0'
                         },
                         right: {
                             type: 'FloatLiteral',
-                            value: '3.3',
+                            value: '3.3'
                         },
-                        operator: '*',
-                    },
-                ],
+                        operator: '*'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -278,37 +278,37 @@ describe('parser > types > float', () => {
                             type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
-                                value: '1.1',
+                                value: '1.1'
                             },
                             right: {
                                 type: 'BinaryExpression',
                                 left: {
                                     type: 'FloatLiteral',
-                                    value: '2.2',
+                                    value: '2.2'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '3.3',
+                                    value: '3.3'
                                 },
-                                operator: '*',
+                                operator: '*'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         right: {
                             type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
-                                value: '4.4',
+                                value: '4.4'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '5.5',
+                                value: '5.5'
                             },
-                            operator: '/',
+                            operator: '/'
                         },
-                        operator: '-',
-                    },
-                ],
+                        operator: '-'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -326,37 +326,37 @@ describe('parser > types > float', () => {
                             type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
-                                value: '1.1',
+                                value: '1.1'
                             },
                             right: {
                                 type: 'BinaryExpression',
                                 left: {
                                     type: 'FloatLiteral',
-                                    value: '2.2',
+                                    value: '2.2'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '3.3',
+                                    value: '3.3'
                                 },
-                                operator: '*',
+                                operator: '*'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         right: {
                             type: 'BinaryExpression',
                             left: {
                                 type: 'FloatLiteral',
-                                value: '4.4',
+                                value: '4.4'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '5.5',
+                                value: '5.5'
                             },
-                            operator: '/',
+                            operator: '/'
                         },
-                        operator: '-',
-                    },
-                ],
+                        operator: '-'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);

@@ -1,10 +1,10 @@
 ## Phase 03
 
-This is the third phase to implement the parser for *StrexLang*.
+This is the third phase to implement the parser for _StrexLang_.
 
 ### Syntax goal
 
-* **Error handling** for integer and float expressions
+-   **Error handling** for integer and float expressions
 
 ### Test
 

@@ -19,8 +19,9 @@ module.exports = async function([arg = '', command] = []) {
         args.push(
             Array(phase)
                 .fill('')
-                .map((_, index) =>
-                    `phase-${String(index + 1).padStart(2, '0')}`)
+                .map(
+                    (_, index) => `phase-${String(index + 1).padStart(2, '0')}`
+                )
                 .join('|')
         );
     }

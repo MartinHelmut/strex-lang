@@ -15,21 +15,21 @@ describe('parser > types > integer', () => {
                             type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
-                                value: '5',
+                                value: '5'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '1',
+                                value: '1'
                             },
-                            operator: '-',
+                            operator: '-'
                         },
                         right: {
                             type: 'IntegerLiteral',
-                            value: '2',
+                            value: '2'
                         },
-                        operator: '/',
-                    },
-                ],
+                        operator: '/'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -47,21 +47,21 @@ describe('parser > types > integer', () => {
                             type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
-                                value: '5',
+                                value: '5'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '1',
+                                value: '1'
                             },
-                            operator: '-',
+                            operator: '-'
                         },
                         right: {
                             type: 'IntegerLiteral',
-                            value: '2',
+                            value: '2'
                         },
-                        operator: '/',
-                    },
-                ],
+                        operator: '/'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -79,29 +79,29 @@ describe('parser > types > integer', () => {
                             type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
                             right: {
                                 type: 'BinaryExpression',
                                 left: {
                                     type: 'IntegerLiteral',
-                                    value: '3',
+                                    value: '3'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '2',
+                                    value: '2'
                                 },
-                                operator: '-',
+                                operator: '-'
                             },
-                            operator: '/',
+                            operator: '/'
                         },
                         right: {
                             type: 'IntegerLiteral',
-                            value: '5',
+                            value: '5'
                         },
-                        operator: '+',
-                    },
-                ],
+                        operator: '+'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -119,29 +119,29 @@ describe('parser > types > integer', () => {
                             type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
                             right: {
                                 type: 'BinaryExpression',
                                 left: {
                                     type: 'IntegerLiteral',
-                                    value: '3',
+                                    value: '3'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '2',
+                                    value: '2'
                                 },
-                                operator: '-',
+                                operator: '-'
                             },
-                            operator: '/',
+                            operator: '/'
                         },
                         right: {
                             type: 'IntegerLiteral',
-                            value: '5',
+                            value: '5'
                         },
-                        operator: '+',
-                    },
-                ],
+                        operator: '+'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -157,23 +157,23 @@ describe('parser > types > integer', () => {
                         type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
-                            value: '2',
+                            value: '2'
                         },
                         right: {
                             type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
-                        operator: '*',
-                    },
-                ],
+                        operator: '*'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -189,23 +189,23 @@ describe('parser > types > integer', () => {
                         type: 'BinaryExpression',
                         left: {
                             type: 'IntegerLiteral',
-                            value: '2',
+                            value: '2'
                         },
                         right: {
                             type: 'BinaryExpression',
                             left: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
-                        operator: '*',
-                    },
-                ],
+                        operator: '*'
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);

@@ -19,8 +19,8 @@ Once you have tried the above, create a GitHub issue notifying your bug report.
 
 If you want to contribute code, please:
 
-- Write [good commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), explain what your patch does, and why it is needed. How to is described in the [Commit changes chapter](#commit-changes).
-- Keep it simple: Any patch that changes a lot of code or is difficult to understand should be discussed before you put in the effort.
+-   Write [good commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), explain what your patch does, and why it is needed. How to is described in the [Commit changes chapter](#commit-changes).
+-   Keep it simple: Any patch that changes a lot of code or is difficult to understand should be discussed before you put in the effort.
 
 Once you have tried the above, create a GitHub pull request with your changes changes and feel awesome 🎉.
 

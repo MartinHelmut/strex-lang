@@ -16,51 +16,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '1',
+                                    value: '1'
                                 },
-                                operator: '=',
+                                operator: '='
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '3',
+                                    value: '3'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '/',
-                        },
-                    },
-                ],
+                            operator: '/'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -79,51 +79,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '1',
+                                    value: '1'
                                 },
-                                operator: '=',
+                                operator: '='
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '3',
+                                    value: '3'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -142,51 +142,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '1.1',
+                                    value: '1.1'
                                 },
-                                operator: '=',
+                                operator: '='
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '3.3',
+                                    value: '3.3'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '2.2',
+                                value: '2.2'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '3.0',
+                                value: '3.0'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -205,51 +205,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '1.1',
+                                    value: '1.1'
                                 },
-                                operator: '=',
+                                operator: '='
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '3.3',
+                                    value: '3.3'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '2.2',
+                                value: '2.2'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '3.0',
+                                value: '3.0'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -268,51 +268,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '0',
+                                    value: '0'
                                 },
-                                operator: '=',
+                                operator: '='
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '3.3',
+                                    value: '3.3'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '3.0',
+                                value: '3.0'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -331,51 +331,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '0',
+                                    value: '0'
                                 },
-                                operator: '=',
+                                operator: '='
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '3.3',
+                                    value: '3.3'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '3.0',
+                                value: '3.0'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -396,71 +396,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '3',
+                                        value: '3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '|',
+                                operator: '|'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '2',
+                                        value: '2'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -481,71 +481,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '3',
+                                        value: '3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '|',
+                                operator: '|'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '2',
+                                        value: '2'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -566,71 +566,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '1.1',
+                                        value: '1.1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '3.3',
+                                        value: '3.3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '|',
+                                operator: '|'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '2.2',
+                                        value: '2.2'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '2.34',
+                                value: '2.34'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '3.01',
+                                value: '3.01'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -651,71 +651,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '1.1',
+                                        value: '1.1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '3.3',
+                                        value: '3.3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '|',
+                                operator: '|'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '2.2',
+                                        value: '2.2'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '2.34',
+                                value: '2.34'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '3.01',
+                                value: '3.01'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -736,71 +736,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '3.3',
+                                        value: '3.3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '|',
+                                operator: '|'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '2',
+                                        value: '2'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '2.34',
+                                value: '2.34'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -821,71 +821,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '3.3',
+                                        value: '3.3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '|',
+                                operator: '|'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '2',
+                                        value: '2'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '2.34',
+                                value: '2.34'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -906,51 +906,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '4',
+                                    value: '4'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '1',
+                                    value: '1'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '*',
+                            operator: '*'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '4',
+                                value: '4'
                             },
-                            operator: '/',
-                        },
-                    },
-                ],
+                            operator: '/'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -969,51 +969,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '4',
+                                    value: '4'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '1',
+                                    value: '1'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '*',
+                            operator: '*'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '4',
+                                value: '4'
                             },
-                            operator: '/',
-                        },
-                    },
-                ],
+                            operator: '/'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1032,51 +1032,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '0.1',
+                                    value: '0.1'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '1.2',
+                                    value: '1.2'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1095,51 +1095,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '0.1',
+                                    value: '0.1'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '1.2',
+                                    value: '1.2'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1158,51 +1158,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '0',
+                                    value: '0'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '1.2',
+                                    value: '1.2'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '1',
+                                value: '1'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1221,51 +1221,51 @@ describe('parser > expressions > if', () => {
                             left: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '0',
+                                    value: '0'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '1.2',
+                                    value: '1.2'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '1',
+                                value: '1'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1286,71 +1286,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '3',
+                                        value: '3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1371,71 +1371,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '3',
+                                        value: '3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '2',
+                                value: '2'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1456,71 +1456,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '1.1',
+                                        value: '1.1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '3.3',
+                                        value: '3.3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '2.2',
+                                        value: '2.2'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '2.34',
+                                value: '2.34'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '3.01',
+                                value: '3.01'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1541,71 +1541,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '1.1',
+                                        value: '1.1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '3.3',
+                                        value: '3.3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '2.2',
+                                        value: '2.2'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '2.34',
+                                value: '2.34'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '3.01',
+                                value: '3.01'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1626,71 +1626,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '3.3',
+                                        value: '3.3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '2',
+                                        value: '2'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '2.34',
+                                value: '2.34'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1711,71 +1711,71 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '=',
+                                    operator: '='
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '3.3',
+                                        value: '3.3'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'BinaryExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '2',
+                                        value: '2'
                                     },
-                                    operator: '-',
+                                    operator: '-'
                                 },
-                                operator: '<',
+                                operator: '<'
                             },
-                            operator: '&',
+                            operator: '&'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '2.34',
+                                value: '2.34'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1798,64 +1798,64 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '4',
+                                        value: '4'
                                     },
-                                    operator: '<',
+                                    operator: '<'
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '1',
+                                    value: '1'
                                 },
-                                operator: '=',
+                                operator: '='
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '*',
+                            operator: '*'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '4',
+                                value: '4'
                             },
-                            operator: '/',
-                        },
-                    },
-                ],
+                            operator: '/'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1876,64 +1876,64 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '4',
+                                        value: '4'
                                     },
-                                    operator: '<',
+                                    operator: '<'
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '1',
+                                    value: '1'
                                 },
-                                operator: '=',
+                                operator: '='
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '3',
+                                value: '3'
                             },
-                            operator: '*',
+                            operator: '*'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'IntegerLiteral',
-                                value: '4',
+                                value: '4'
                             },
-                            operator: '/',
-                        },
-                    },
-                ],
+                            operator: '/'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -1954,64 +1954,64 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '0.1',
+                                        value: '0.1'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '1.2',
+                                        value: '1.2'
                                     },
-                                    operator: '<',
+                                    operator: '<'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '5.5',
+                                    value: '5.5'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -2032,64 +2032,64 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '0.1',
+                                        value: '0.1'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '1.2',
+                                        value: '1.2'
                                     },
-                                    operator: '<',
+                                    operator: '<'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'FloatLiteral',
-                                    value: '5.5',
+                                    value: '5.5'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -2110,64 +2110,64 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '1.2',
+                                        value: '1.2'
                                     },
-                                    operator: '<',
+                                    operator: '<'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '5',
+                                    value: '5'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);
@@ -2188,64 +2188,64 @@ describe('parser > expressions > if', () => {
                                 left: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'IntegerLiteral',
-                                        value: '1',
+                                        value: '1'
                                     },
-                                    operator: '>',
+                                    operator: '>'
                                 },
                                 right: {
                                     type: 'BooleanExpression',
                                     left: {
-                                        type: 'LastExpression',
+                                        type: 'LastExpression'
                                     },
                                     right: {
                                         type: 'FloatLiteral',
-                                        value: '1.2',
+                                        value: '1.2'
                                     },
-                                    operator: '<',
+                                    operator: '<'
                                 },
-                                operator: '&',
+                                operator: '&'
                             },
                             right: {
                                 type: 'BooleanExpression',
                                 left: {
-                                    type: 'LastExpression',
+                                    type: 'LastExpression'
                                 },
                                 right: {
                                     type: 'IntegerLiteral',
-                                    value: '5',
+                                    value: '5'
                                 },
-                                operator: '>',
+                                operator: '>'
                             },
-                            operator: '|',
+                            operator: '|'
                         },
                         consequent: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '+',
+                            operator: '+'
                         },
                         alternate: {
                             type: 'BinaryExpression',
                             left: {
-                                type: 'LastExpression',
+                                type: 'LastExpression'
                             },
                             right: {
                                 type: 'FloatLiteral',
-                                value: '1.5',
+                                value: '1.5'
                             },
-                            operator: '-',
-                        },
-                    },
-                ],
+                            operator: '-'
+                        }
+                    }
+                ]
             };
 
             expect(ast).toEqual(expected);

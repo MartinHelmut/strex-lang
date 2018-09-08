@@ -1,11 +1,11 @@
 ## Phase 02
 
-This is the second phase to implement the parser for *StrexLang*.
+This is the second phase to implement the parser for _StrexLang_.
 
 ### Syntax goal
 
-* **Combined types** uses integer and float in one expression
-* **Braces** to change the precedence of expressions
+-   **Combined types** uses integer and float in one expression
+-   **Braces** to change the precedence of expressions
 
 ### Test
 
@@ -21,21 +21,21 @@ Execute `npm test -- phase-02` to test this phase (including earlier phases).
 
 ```json
 {
-   "type": "Program",
-   "body": [
-      {
-         "type": "BinaryExpression",
-         "left": {
-            "type": "IntegerLiteral",
-            "value": "2 "
-         },
-         "right": {
-            "type": "FloatLiteral",
-            "value": "4.2"
-         },
-         "operator": "+"
-      }
-   ]
+    "type": "Program",
+    "body": [
+        {
+            "type": "BinaryExpression",
+            "left": {
+                "type": "IntegerLiteral",
+                "value": "2 "
+            },
+            "right": {
+                "type": "FloatLiteral",
+                "value": "4.2"
+            },
+            "operator": "+"
+        }
+    ]
 }
 ```
 
@@ -47,36 +47,36 @@ Execute `npm test -- phase-02` to test this phase (including earlier phases).
 
 ```json
 {
-   "type": "Program",
-   "body": [
-      {
-         "type": "BinaryExpression",
-         "left": {
+    "type": "Program",
+    "body": [
+        {
             "type": "BinaryExpression",
             "left": {
-               "type": "FloatLiteral",
-               "value": "2.2 "
+                "type": "BinaryExpression",
+                "left": {
+                    "type": "FloatLiteral",
+                    "value": "2.2 "
+                },
+                "right": {
+                    "type": "BinaryExpression",
+                    "left": {
+                        "type": "IntegerLiteral",
+                        "value": "2 "
+                    },
+                    "right": {
+                        "type": "FloatLiteral",
+                        "value": "3.0"
+                    },
+                    "operator": "+"
+                },
+                "operator": "*"
             },
             "right": {
-               "type": "BinaryExpression",
-               "left": {
-                  "type": "IntegerLiteral",
-                  "value": "2 "
-               },
-               "right": {
-                  "type": "FloatLiteral",
-                  "value": "3.0"
-               },
-               "operator": "+"
+                "type": "IntegerLiteral",
+                "value": "4"
             },
-            "operator": "*"
-         },
-         "right": {
-            "type": "IntegerLiteral",
-            "value": "4"
-         },
-         "operator": "/"
-      }
-   ]
+            "operator": "/"
+        }
+    ]
 }
 ```

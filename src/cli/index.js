@@ -23,4 +23,4 @@ const tests = require('./tests');
     }
 
     process.exit(0);
-}());
+})();

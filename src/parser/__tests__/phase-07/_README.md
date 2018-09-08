@@ -1,10 +1,10 @@
 ## Phase 07
 
-This is the seventh phase to implement the parser for *StrexLang*.
+This is the seventh phase to implement the parser for _StrexLang_.
 
 ### Syntax goal
 
-* **Error messages for if-expressions**
+-   **Error messages for if-expressions**
 
 ### Test
 

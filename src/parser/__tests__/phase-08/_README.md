@@ -1,12 +1,12 @@
 ## Phase 08
 
-This is the eighth phase to implement the parser for *StrexLang*.
+This is the eighth phase to implement the parser for _StrexLang_.
 
 **Important:** To make your life easier, here is the point where your current parser can be reworked to use a tokenizer. The tokenizer should be separated by the parser in `src/parser/tokenizer.js`.
 
 ### Syntax goal
 
-* **Human readable error messages**
+-   **Human readable error messages**
 
 ### Test
 
