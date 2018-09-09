@@ -14,7 +14,9 @@ Execute `npm test -- phase-08` to test this phase (including earlier phases).
 
 ### Examples
 
-All error messages get a human readable form e.g.:
+**Human readable error messages:**
+
+All error messages get a human readable form with line number and column, e.g.:
 
 ```strex
 = 1 ? 4 :

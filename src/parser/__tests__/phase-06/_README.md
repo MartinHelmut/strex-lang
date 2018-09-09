@@ -16,6 +16,8 @@ Execute `npm test -- phase-06` to test this phase (including earlier phases).
 
 **if-expressions with "or":**
 
+The `|` or-operator can be used to test against multiple boolean expressions where only one has to be true. As many as necessary can be used.
+
 ```strex
 = 1 | > 3 ? + 2 : / 3
 ```
@@ -75,6 +77,8 @@ Execute `npm test -- phase-06` to test this phase (including earlier phases).
 
 **if-expressions with "and":**
 
+The `&` and-operator can be used to test against multiple boolean expressions that all need to evaluate to true. As many as necessary can be used.
+
 ```strex
 < 4 & > 1 ? * 3 : / 4
 ```
@@ -133,6 +137,8 @@ Execute `npm test -- phase-06` to test this phase (including earlier phases).
 ```
 
 **if-expressions with "or" and "and":**
+
+This is the combination of or- and and-operator for if-expressions.
 
 ```strex
 > 1 & < 4 | = 42 ? +1 : -1

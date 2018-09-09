@@ -56,7 +56,7 @@ Only base arithmetic is used: `+ - * /` with integer values.
 
 #### if-expression
 
-**Defined as:** `<compare-operator> <boolean-expression> ? <expression> : <expression>`
+**Defined as:** `<boolean-expression> ? <expression> : <expression>`
 
 If-expression start with a compare operator `=`, `>` or `<` and sets the if case with `?` and the else with `:` to compare against an expression. It uses the last evaluated expression for the comparison. The first expression after `?` is the true case and works with the last evaluated expression. The `:` indicates the else case and gets also the last expression to work with if the if-case is false.
 

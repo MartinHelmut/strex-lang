@@ -15,6 +15,8 @@ Execute `npm test -- phase-02` to test this phase (including earlier phases).
 
 **Combined types:**
 
+Integer and float numbers can be used together and always result in float numbers. Integer are only the result if all operands are integer.
+
 ```strex
 2 + 4.2
 ```
@@ -40,6 +42,8 @@ Execute `npm test -- phase-02` to test this phase (including earlier phases).
 ```
 
 **Braces:**
+
+Braces can be used in arithmetic to define precedence.
 
 ```strex
 2.2 * (2 + 3.0) / 4

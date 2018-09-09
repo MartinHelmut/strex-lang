@@ -12,6 +12,10 @@ Execute `npm test -- phase-05` to test this phase (including earlier phases).
 
 ### Examples
 
+**sub if-expressions:**
+
+Now both expression for the true- and false-case can be if-expressions itself.
+
 ```strex
 > 1 ? = 2 ? -2 : -3 : - 6
 ```

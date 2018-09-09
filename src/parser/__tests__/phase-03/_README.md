@@ -14,7 +14,7 @@ Execute `npm test -- phase-03` to test this phase (including earlier phases).
 
 **Error handling:**
 
-All of the following examples throw an error:
+All of the following example will throw a syntax error:
 
 ```strex
 2.1 + 6 -

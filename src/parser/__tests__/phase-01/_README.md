@@ -19,6 +19,8 @@ Execute `npm test -- phase-01` to test this phase.
 
 **Integer:**
 
+Integers are whole numbers (without fraction) and can contain leading zeros.
+
 ```strex
 42
 ```
@@ -39,6 +41,8 @@ Results in the following AST:
 
 **Float:**
 
+Floats are fractional numbers and can contain leading zeros.
+
 ```strex
 00034.29786
 ```
@@ -58,6 +62,8 @@ Results in the following AST:
 ```
 
 **Basic arithmetic:**
+
+Arithmetic works as expected, multiplication and division operators have precedence over the addition and subtraction operators.
 
 ```strex
 1 + 2
@@ -121,8 +127,11 @@ Complex example with precedence:
 
 **Print out:**
 
+A print out statement is an empty line and indicates that the last evaluated expression should be written to _stdout_.
+
 ```strex
 42
+\n
 ```
 
 Results in the following AST:

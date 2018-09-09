@@ -29,3 +29,5 @@ Execute `npm test -- phase-07` to test this phase (including earlier phases).
 ```strex
 = 1 ? + 2 :
 ```
+
+Important for the "alternate" case is that if written like `= 1 ? + 2` the alternate case is implicit the last expression.
