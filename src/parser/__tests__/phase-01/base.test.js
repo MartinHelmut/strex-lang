@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-const parser = require('../../parser');
+const parser = require('../../index');
 
 describe('parser > base', () => {
     describe('body', () => {
@@ -7,10 +6,16 @@ describe('parser > base', () => {
             const code = ``;
             const ast = parser(code);
             const expected = {
+                type: 'Program',
                 body: [],
             };
 
             expect(ast).toEqual(expected);
+        });
+
+        test('does not throw on JSON.stringify', () => {
+            const code = ``;
+            expect(() => JSON.stringify(parser(code))).not.toThrow();
         });
     });
 
@@ -19,8 +24,12 @@ describe('parser > base', () => {
             const code = `\n`;
             const ast = parser(code);
             const expected = {
+                type: 'Program',
                 body: [
-                    {type: 'PrintOut'},
+                    {
+                        type: 'PrintOut',
+                        value: {type: 'LastExpression'},
+                    },
                 ],
             };
 
@@ -31,12 +40,21 @@ describe('parser > base', () => {
             const code = `\n\n`;
             const ast = parser(code);
             const expected = {
+                type: 'Program',
                 body: [
-                    {type: 'PrintOut'},
+                    {
+                        type: 'PrintOut',
+                        value: {type: 'LastExpression'},
+                    },
                 ],
             };
 
             expect(ast).toEqual(expected);
+        });
+
+        test('does not throw on JSON.stringify', () => {
+            const code = `\n\n`;
+            expect(() => JSON.stringify(parser(code))).not.toThrow();
         });
     });
 });

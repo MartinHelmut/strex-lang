@@ -1,0 +1,168 @@
+{
+    /**
+     * Please don't modify!
+     *
+     * This is the Strex language definition in PEG (https://en.wikipedia.org/wiki/Parsing_expression_grammar).
+     */
+
+    const TYPE = {
+        PROGRAM: 'Program',
+        PRINT_OUT: 'PrintOut',
+        INTEGER_LITERAL: 'IntegerLiteral',
+        FLOAT_LITERAL: 'FloatLiteral',
+        BINARY_EXPRESSION: 'BinaryExpression',
+        BOOLEAN_EXPRESSION: 'BooleanExpression',
+        LAST_EXPRESSION: 'LastExpression',
+        IF_EXPRESSION: 'IfExpression',
+    };
+
+    const createExpressionReducer = type => (result, [, operator, right]) => (
+        { type, left: result, right, operator }
+    );
+
+    const LAST_EXP_VALUE = { type: TYPE.LAST_EXPRESSION };
+}
+
+Program
+    = body:(Line / PrintOut)* {
+        return { type: TYPE.PROGRAM, body };
+    }
+
+PrintOut 'print out'
+    = EOL+ {
+        return {
+            type: TYPE.PRINT_OUT,
+            value: LAST_EXP_VALUE,
+        };
+    }
+
+Line
+    = line:Expressions EOL {
+        return line;
+    }
+
+Expressions
+    = LastExpression
+    / BinaryExpression
+    / IfExpression
+    / EOF
+
+LastExpression
+    = _ operator:(AdditiveOperator / MultiplicativeOperator) right:BinaryExpression {
+        return {
+            type: TYPE.BINARY_EXPRESSION,
+            left: LAST_EXP_VALUE,
+            right,
+            operator,
+        };
+    }
+
+BinaryExpression 'binary expression'
+    = _ head:Term tail:(_ AdditiveOperator Term)* _ {
+        return tail.reduce(createExpressionReducer(TYPE.BINARY_EXPRESSION), head);
+    }
+
+IfExpression 'if expression'
+    = test:CompareOrExpression? '?' consequent:Expressions? alternate:(':' Expressions?)? {
+        if (!test) {
+            error('Missing test for if-expression');
+        }
+
+        if (!consequent) {
+            error('Missing consequent for if-expression');
+        }
+
+        if (alternate && !alternate[1]) {
+            error('Missing alternate for if-expression');
+        }
+
+        return {
+            type: TYPE.IF_EXPRESSION,
+            test,
+            consequent,
+            alternate: alternate ? alternate[1] : LAST_EXP_VALUE,
+        };
+    }
+
+CompareOrExpression 'compare or expression'
+    = head:CompareAndExpression tail:(_ OrOperator CompareAndExpression)* _ {
+        return tail.reduce(createExpressionReducer(TYPE.BOOLEAN_EXPRESSION), head);
+    }
+
+CompareAndExpression 'compare and expression'
+    = head:BooleanExpression tail:(_ AndOperator BooleanExpression)* _ {
+        return tail.reduce(createExpressionReducer(TYPE.BOOLEAN_EXPRESSION), head);
+    }
+
+BooleanExpression 'boolean expression'
+    = _ operator:CompareOperator right:(LastExpression / BinaryExpression) {
+        return {
+            type: TYPE.BOOLEAN_EXPRESSION,
+            left: LAST_EXP_VALUE,
+            right,
+            operator,
+        };
+    }
+
+Term
+    = _ head:Factor tail:(_ MultiplicativeOperator Factor)* _ {
+        return tail.reduce(createExpressionReducer(TYPE.BINARY_EXPRESSION), head);
+    }
+
+Factor
+    = _ '(' expr:BinaryExpression ')' _ { return expr; }
+    / FloatLiteral
+    / IntegerLiteral
+
+IntegerLiteral 'integer'
+    = _ digits:([0-9]+) _ {
+        return {
+            type: TYPE.INTEGER_LITERAL,
+            value: digits.join(''),
+        };
+    }
+
+FloatLiteral 'float'
+    = _ digits:([0-9]+ '.' [0-9]+) _ {
+        return {
+            type: TYPE.FLOAT_LITERAL,
+            value: `${digits[0].join('')}${digits[1]}${digits[2].join('')}`,
+        };
+    }
+
+AdditiveOperator
+    = '+'
+    / '-'
+
+MultiplicativeOperator
+    = '*'
+    / '/'
+
+CompareOperator
+    = '='
+    / '>'
+    / '<'
+
+OrOperator
+    = '|'
+
+AndOperator
+    = '&'
+
+_
+    = WhiteSpace*
+
+WhiteSpace 'whitespace'
+    = "\t"
+    / "\v"
+    / "\f"
+    / " "
+    / "\u00A0"
+    / "\uFEFF"
+
+EOL 'end of line'
+    = '\n'
+    / '\n\r'
+
+EOF 'end of file'
+    = !.

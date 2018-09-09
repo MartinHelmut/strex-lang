@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-// const compiler = require('../compiler');
+const compiler = require('../index');
 
 describe('compiler', () => {
     //

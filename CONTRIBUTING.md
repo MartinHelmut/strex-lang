@@ -50,6 +50,12 @@ and to lint all the code:
 $ npm run lint
 ```
 
+If you want to ensure that the tests and compiler work against a reference implementation you can execute:
+
+```shell
+npm test -- --ensure
+```
+
 ### Commit changes
 
 **This repo is is Commitizen-friendly!** ([read more][czcli])
@@ -62,14 +68,12 @@ $ git checkout -b do-something
 
 **There is no specific naming convention for branches.**
 
-Add your changes and run `npm run commit` to start the commitizen cli to create a proper commit message.
-
-Create a "Pull Request" on Github and be awesome! 😎
+Add your changes with a proper and commitizen friendly message. Create a "Pull Request" on Github and be awesome! 😎
 
 ## Recommended workflow for release
 
 1.  Make changes
-2.  Commit those changes with `npm run commit`
+2.  Commit those changes
 3.  Make sure all tests turn green
 4.  Create a new release with `npm run release`
 5.  Push your release `git push --follow-tags origin master`

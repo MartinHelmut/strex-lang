@@ -1,14 +1,13 @@
 {
   "name": "strex-lang",
   "version": "0.1.0",
-  "description": "The *StrexLang* (\"Strange expression language\") is used to train regular expressions for JavaScript in a hopefully not so boring way.",
-  "bin": "src/cli.js",
+  "description": "The *StrexLang* (\"Strange expression language\") is used to train regular expressions and parser design for JavaScript in a hopefully not so boring way.",
+  "bin": "src/cli/index.js",
   "private": true,
   "scripts": {
-    "start": "node src/cli.js",
-    "test": "jest",
+    "start": "node src/cli",
+    "test": "node src/cli --run-tests",
     "lint": "eslint '**/*.js'",
-    "commit": "git-cz",
     "release": "standard-version"
   },
   "keywords": [
@@ -24,17 +23,11 @@
     "node": ">=8",
     "npm": ">=5"
   },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
   "devDependencies": {
-    "commitizen": "2.10.1",
-    "cz-conventional-changelog": "2.1.0",
     "eslint": "5.4.0",
     "eslint-config-google": "0.9.1",
     "jest": "^23.5.0",
+    "pegjs": "0.10.0",
     "standard-version": "4.4.0"
   }
 }
