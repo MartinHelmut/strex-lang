@@ -1,12 +1,4 @@
 {
-    /**
-     * Please don't modify!
-     *
-     * This is the Strex language definition in PEG (https://en.wikipedia.org/wiki/Parsing_expression_grammar).
-     * If you want to checkout the language you can copy & past this file into
-     * the online playground for PEG: https://pegjs.org/online
-     */
-
     const TYPE = {
         PROGRAM: 'Program',
         PRINT_OUT: 'PrintOut',

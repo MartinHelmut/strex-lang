@@ -36,11 +36,15 @@ Clone this repository locally:
 git clone git@github.com:MartinHelmut/strex-lang.git && cd strex-lang
 ```
 
+or even better fork this repository. This also makes it easier to update your repository later.
+
 After this install the necessary NPM dependencies:
 
 ```shell
 npm i
 ```
+
+**Note:** If you forked this repository to implement your parser it would be lovely to send a PR here to add it to the [list of possible implementations](docs/implementations.md) made by the community 🎉
 
 ### Start development
 
