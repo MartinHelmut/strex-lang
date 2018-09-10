@@ -28,7 +28,7 @@
     "eslint-config-google": "0.10.0",
     "eslint-config-prettier": "3.0.1",
     "eslint-plugin-prettier": "2.6.2",
-    "jest": "23.5.0",
+    "jest": "23.6.0",
     "pegjs": "0.10.0",
     "prettier": "1.14.2",
     "standard-version": "4.4.0"
