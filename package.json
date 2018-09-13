@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "node src/cli",
-    "test": "node src/cli --run-tests",
+    "test": "node src/cli --test",
     "lint": "eslint '**/*.js'",
     "release": "standard-version"
   },
@@ -24,6 +24,7 @@
     "npm": ">=5"
   },
   "devDependencies": {
+    "commander": "2.18.0",
     "eslint": "5.5.0",
     "eslint-config-google": "0.10.0",
     "eslint-config-prettier": "3.0.1",

@@ -8,19 +8,35 @@
  */
 'use strict';
 
-const repl = require('./repl');
-const tests = require('./tests');
+const commander = require('commander');
+const pkg = require('../../package.json');
 
-(async function() {
-    const [command, ...args] = process.argv.slice(2);
+const test = require('./commands/test');
+const execute = require('./commands/execute');
+const repl = require('./commands/repl');
 
-    switch (command) {
-        case '--run-tests':
-            await tests(args);
-            break;
-        default:
-            await repl();
+const print = console.log;
+
+(async function cli() {
+    commander
+        .version(pkg.version, '-v, --version')
+        .option('-x, --execute <input>', 'Execute a strex file')
+        .option('-t, --test [phase]', 'Run tests for phases')
+        .option('-e, --ensure', 'Execute with reference implementation')
+        .parse(process.argv);
+
+    try {
+        if (commander.test) {
+            return print(await test(commander));
+        }
+
+        if (commander.execute) {
+            return print(await execute(commander));
+        }
+
+        return await repl(commander);
+    } catch (exception) {
+        console.error(exception.message);
+        process.exit(1);
     }
-
-    process.exit(0);
 })();
