@@ -32,8 +32,11 @@ module.exports = async function test({ test, ensure }) {
     let jestArgs = [];
 
     if (typeof test === 'string') {
-        const phase = parseInt(test.split('-')[1], 10);
-        jestArgs.push(createPhaseRange(phase).join('|'));
+        const arg =
+            test === 'compiler'
+                ? test
+                : createPhaseRange(parseInt(test.split('-')[1], 10)).join('|');
+        jestArgs.push(arg);
     }
 
     // Use reference implementation
@@ -44,6 +47,8 @@ module.exports = async function test({ test, ensure }) {
         );
 
         jestArgs.push(`--setupTestFrameworkScriptFile=${setupTestsFilePath}`);
+
+        process.env.STREX_LANG_ENSURE = '1';
     }
 
     return jest.run(jestArgs);

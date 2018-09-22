@@ -69,4 +69,4 @@ Development can be done in phases to get step by step to a more and more sophist
 
 Phases can also be tested with `npm test -- phase-01` for the first phase. If a later phase is tested all phases before are executed as well to ensure nothing broke.
 
-**Note:** running `npm test` will execute not only all phases but the compiler tests as well.
+**Note:** running `npm test` will execute not only all phases but the compiler tests as well. If you only want to execute compiler tests you can run `npm test -- compiler`.
