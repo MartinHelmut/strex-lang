@@ -11,7 +11,7 @@
 const commander = require('commander');
 const pkg = require('../../package.json');
 
-const test = require('./commands/test');
+const test = require('./commands/tests');
 const execute = require('./commands/execute');
 const repl = require('./commands/repl');
 
