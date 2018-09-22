@@ -1,8 +1,8 @@
 # StrexLang
 
 [![Build Status](https://travis-ci.org/MartinHelmut/strex-lang.svg?branch=master)](https://travis-ci.org/MartinHelmut/strex-lang)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 The _StrexLang_ ("Strange expression language") is only used to train regular expressions and parser design for JavaScript in a hopefully not so boring way 😎.
 
