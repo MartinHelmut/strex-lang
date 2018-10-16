@@ -29,7 +29,7 @@ function createPhaseRange(toPhase) {
  * @return {Promise<void>}
  */
 module.exports = async function test({ test, ensure }) {
-    let jestArgs = [];
+    const jestArgs = [];
 
     if (typeof test === 'string') {
         const arg =
