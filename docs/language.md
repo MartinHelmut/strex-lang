@@ -1,9 +1,9 @@
 ## Language
 
--   [Language](#language)
-    -   [Example](#example)
-    -   [Features](#features)
-    -   [AST](#ast)
+- [Language](#language)
+  - [Example](#example)
+  - [Features](#features)
+  - [AST](#ast)
 
 ---
 
@@ -30,25 +30,25 @@ _StrexLang_ is a very small language without any functions. It contains of expre
 
 #### Types
 
--   **Signed and unsigned integer** (e.g. `-3`, `0`, `23`)
-    -   Can be used as literal
--   **Signed and unsigned float** (e.g. `-3.2`, `0.1`, `23.9`)
-    -   Can be used as literal
--   **Implicit boolean** (`true` and `false`)
-    -   Can not be used as literal
-    -   Is only be used for compare results in `if`-statements
+- **Signed and unsigned integer** (e.g. `-3`, `0`, `23`)
+  - Can be used as literal
+- **Signed and unsigned float** (e.g. `-3.2`, `0.1`, `23.9`)
+  - Can be used as literal
+- **Implicit boolean** (`true` and `false`)
+  - Can not be used as literal
+  - Is only be used for compare results in `if`-statements
 
 #### Operator
 
--   `+` - Math operator for addition (works with Integer and Float)
--   `-` - Math operator for subtraction (works with Integer and Float)
--   `*` - Math operator for multiplication (works with Integer and Float)
--   `/` - Math operator for division (works with Integer and Float)
--   `|` - "Or" (alternate/pipe) operator (works with implicit boolean)
--   `&` - "And" (consequent) operator (works with implicit boolean)
--   `=` - Equals operator (works with Integer and Float to compare value)
--   `>` - Greater-than operator (works with Integer and Float to compare value)
--   `<` - Less-than operator (works with Integer and Float to compare value)
+- `+` - Math operator for addition (works with Integer and Float)
+- `-` - Math operator for subtraction (works with Integer and Float)
+- `*` - Math operator for multiplication (works with Integer and Float)
+- `/` - Math operator for division (works with Integer and Float)
+- `|` - "Or" (alternate/pipe) operator (works with implicit boolean)
+- `&` - "And" (consequent) operator (works with implicit boolean)
+- `=` - Equals operator (works with Integer and Float to compare value)
+- `>` - Greater-than operator (works with Integer and Float to compare value)
+- `<` - Less-than operator (works with Integer and Float to compare value)
 
 #### Calculation
 
@@ -109,70 +109,70 @@ the resulting AST would look like the following (defined as JSON):
 
 ```json
 {
-    "body": [
-        {
-            "type": "BinaryExpression",
-            "left": {
-                "type": "IntegerLiteral",
-                "value": "4"
-            },
-            "right": {
-                "type": "IntegerLiteral",
-                "value": "3"
-            },
-            "operator": "+"
+  "body": [
+    {
+      "type": "BinaryExpression",
+      "left": {
+        "type": "IntegerLiteral",
+        "value": "4"
+      },
+      "right": {
+        "type": "IntegerLiteral",
+        "value": "3"
+      },
+      "operator": "+"
+    },
+    {
+      "type": "IfExpression",
+      "test": {
+        "type": "BooleanExpression",
+        "left": {
+          "type": "LastExpression"
         },
-        {
-            "type": "IfExpression",
-            "test": {
-                "type": "BooleanExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": {
-                    "type": "IntegerLiteral",
-                    "value": "7"
-                },
-                "operator": "="
-            },
-            "consequent": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": {
-                    "type": "IntegerLiteral",
-                    "value": "5"
-                },
-                "operator": "+"
-            },
-            "alternate": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": {
-                    "type": "IntegerLiteral",
-                    "value": "4"
-                },
-                "operator": "-"
-            }
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "7"
         },
-        {
-            "type": "BinaryExpression",
-            "left": {
-                "type": "LastExpression"
-            },
-            "right": {
-                "type": "IntegerLiteral",
-                "value": "2"
-            },
-            "operator": "-"
+        "operator": "="
+      },
+      "consequent": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "LastExpression"
         },
-        {
-            "type": "PrintOut"
-        }
-    ]
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "5"
+        },
+        "operator": "+"
+      },
+      "alternate": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "LastExpression"
+        },
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "4"
+        },
+        "operator": "-"
+      }
+    },
+    {
+      "type": "BinaryExpression",
+      "left": {
+        "type": "LastExpression"
+      },
+      "right": {
+        "type": "IntegerLiteral",
+        "value": "2"
+      },
+      "operator": "-"
+    },
+    {
+      "type": "PrintOut"
+    }
+  ]
 }
 ```
 
@@ -180,7 +180,7 @@ Step by step the AST is defined as follows. It starts with the actual program bo
 
 ```json
 {
-    "body": []
+  "body": []
 }
 ```
 
@@ -188,16 +188,16 @@ The `body` array contains any defined statement and expression of the program li
 
 ```json
 {
-    "type": "BinaryExpression",
-    "left": {
-        "type": "IntegerLiteral",
-        "value": "4"
-    },
-    "right": {
-        "type": "IntegerLiteral",
-        "value": "3"
-    },
-    "operator": "+"
+  "type": "BinaryExpression",
+  "left": {
+    "type": "IntegerLiteral",
+    "value": "4"
+  },
+  "right": {
+    "type": "IntegerLiteral",
+    "value": "3"
+  },
+  "operator": "+"
 }
 ```
 
@@ -249,15 +249,15 @@ The next line uses the last expression as left hand to assign the operator `-` w
 
 ```json
 {
-    "type": "BinaryExpression",
-    "left": {
-        "type": "LastExpression"
-    },
-    "right": {
-        "type": "IntegerLiteral",
-        "value": "2"
-    },
-    "operator": "-"
+  "type": "BinaryExpression",
+  "left": {
+    "type": "LastExpression"
+  },
+  "right": {
+    "type": "IntegerLiteral",
+    "value": "2"
+  },
+  "operator": "-"
 }
 ```
 
@@ -265,7 +265,7 @@ The last statement is the "empty line" that results in a print out to the stdout
 
 ```json
 {
-    "type": "PrintOut"
+  "type": "PrintOut"
 }
 ```
 

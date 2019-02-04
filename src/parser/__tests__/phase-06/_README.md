@@ -4,9 +4,9 @@ This is the sixth phase to implement the parser for _StrexLang_.
 
 ### Syntax goal
 
--   **if-expressions with "or"** e.g. `= 1 | > 2 ? + 2 : + 3`
--   **if-expressions with "and"** e.g. `< 4 & > 1 ? + 2 : + 3`
--   **if-expressions with "or" and "and"** e.g. `= 1 | > 2 & < 3 ? + 2 : + 3`
+- **if-expressions with "or"** e.g. `= 1 | > 2 ? + 2 : + 3`
+- **if-expressions with "and"** e.g. `< 4 & > 1 ? + 2 : + 3`
+- **if-expressions with "or" and "and"** e.g. `= 1 | > 2 & < 3 ? + 2 : + 3`
 
 ### Test
 
@@ -24,54 +24,54 @@ The `|` or-operator can be used to test against multiple boolean expressions whe
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "IfExpression",
-            "test": {
-                "type": "BooleanExpression",
-                "left": {
-                    "type": "BooleanExpression",
-                    "left": {
-                        "type": "LastExpression"
-                    },
-                    "right": {
-                        "type": "IntegerLiteral",
-                        "value": "1 "
-                    },
-                    "operator": "="
-                },
-                "right": undefined,
-                "operator": "|"
-            },
-            "consequent": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": [
-                    {
-                        "type": "IntegerLiteral",
-                        "value": "2 "
-                    }
-                ],
-                "operator": "+"
-            },
-            "alternate": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": [
-                    {
-                        "type": "IntegerLiteral",
-                        "value": "3"
-                    }
-                ],
-                "operator": "/"
-            }
-        }
-    ]
+  "type": "Program",
+  "body": [
+    {
+      "type": "IfExpression",
+      "test": {
+        "type": "BooleanExpression",
+        "left": {
+          "type": "BooleanExpression",
+          "left": {
+            "type": "LastExpression"
+          },
+          "right": {
+            "type": "IntegerLiteral",
+            "value": "1 "
+          },
+          "operator": "="
+        },
+        "right": undefined,
+        "operator": "|"
+      },
+      "consequent": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "LastExpression"
+        },
+        "right": [
+          {
+            "type": "IntegerLiteral",
+            "value": "2 "
+          }
+        ],
+        "operator": "+"
+      },
+      "alternate": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "LastExpression"
+        },
+        "right": [
+          {
+            "type": "IntegerLiteral",
+            "value": "3"
+          }
+        ],
+        "operator": "/"
+      }
+    }
+  ]
 }
 ```
 
@@ -85,54 +85,54 @@ The `&` and-operator can be used to test against multiple boolean expressions th
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "IfExpression",
-            "test": {
-                "type": "BooleanExpression",
-                "left": {
-                    "type": "BooleanExpression",
-                    "left": {
-                        "type": "LastExpression"
-                    },
-                    "right": {
-                        "type": "IntegerLiteral",
-                        "value": "4 "
-                    },
-                    "operator": "<"
-                },
-                "right": undefined,
-                "operator": "&"
-            },
-            "consequent": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": [
-                    {
-                        "type": "IntegerLiteral",
-                        "value": "3 "
-                    }
-                ],
-                "operator": "*"
-            },
-            "alternate": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": [
-                    {
-                        "type": "IntegerLiteral",
-                        "value": "4"
-                    }
-                ],
-                "operator": "/"
-            }
-        }
-    ]
+  "type": "Program",
+  "body": [
+    {
+      "type": "IfExpression",
+      "test": {
+        "type": "BooleanExpression",
+        "left": {
+          "type": "BooleanExpression",
+          "left": {
+            "type": "LastExpression"
+          },
+          "right": {
+            "type": "IntegerLiteral",
+            "value": "4 "
+          },
+          "operator": "<"
+        },
+        "right": undefined,
+        "operator": "&"
+      },
+      "consequent": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "LastExpression"
+        },
+        "right": [
+          {
+            "type": "IntegerLiteral",
+            "value": "3 "
+          }
+        ],
+        "operator": "*"
+      },
+      "alternate": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "LastExpression"
+        },
+        "right": [
+          {
+            "type": "IntegerLiteral",
+            "value": "4"
+          }
+        ],
+        "operator": "/"
+      }
+    }
+  ]
 }
 ```
 
@@ -146,58 +146,58 @@ This is the combination of or- and and-operator for if-expressions.
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "IfExpression",
-            "test": {
-                "type": "BooleanExpression",
-                "left": {
-                    "type": "BooleanExpression",
-                    "left": {
-                        "type": "BooleanExpression",
-                        "left": {
-                            "type": "LastExpression"
-                        },
-                        "right": {
-                            "type": "IntegerLiteral",
-                            "value": "1 "
-                        },
-                        "operator": ">"
-                    },
-                    "right": undefined,
-                    "operator": "&"
-                },
-                "right": undefined,
-                "operator": "|"
+  "type": "Program",
+  "body": [
+    {
+      "type": "IfExpression",
+      "test": {
+        "type": "BooleanExpression",
+        "left": {
+          "type": "BooleanExpression",
+          "left": {
+            "type": "BooleanExpression",
+            "left": {
+              "type": "LastExpression"
             },
-            "consequent": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": [
-                    {
-                        "type": "IntegerLiteral",
-                        "value": "1 "
-                    }
-                ],
-                "operator": "+"
+            "right": {
+              "type": "IntegerLiteral",
+              "value": "1 "
             },
-            "alternate": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": [
-                    {
-                        "type": "IntegerLiteral",
-                        "value": "1"
-                    }
-                ],
-                "operator": "-"
-            }
-        }
-    ]
+            "operator": ">"
+          },
+          "right": undefined,
+          "operator": "&"
+        },
+        "right": undefined,
+        "operator": "|"
+      },
+      "consequent": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "LastExpression"
+        },
+        "right": [
+          {
+            "type": "IntegerLiteral",
+            "value": "1 "
+          }
+        ],
+        "operator": "+"
+      },
+      "alternate": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "LastExpression"
+        },
+        "right": [
+          {
+            "type": "IntegerLiteral",
+            "value": "1"
+          }
+        ],
+        "operator": "-"
+      }
+    }
+  ]
 }
 ```

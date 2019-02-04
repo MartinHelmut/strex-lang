@@ -4,12 +4,12 @@ This is the first phase to implement the parser for _StrexLang_.
 
 ### Syntax goal
 
--   **Integer** e.g. `4`, `-4580`
--   **Float** e.g. `9.0`, `-6.83654`, `0235.5678`
--   **Basic arithmetic** with `+`, `-`, `*` and `/`
--   **Print out** on empty line
--   Whitespace is optional
--   Multiplication and division operators have precedence over the addition and subtraction operators
+- **Integer** e.g. `4`, `-4580`
+- **Float** e.g. `9.0`, `-6.83654`, `0235.5678`
+- **Basic arithmetic** with `+`, `-`, `*` and `/`
+- **Print out** on empty line
+- Whitespace is optional
+- Multiplication and division operators have precedence over the addition and subtraction operators
 
 ### Test
 
@@ -29,13 +29,13 @@ Results in the following AST:
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "IntegerLiteral",
-            "value": "42"
-        }
-    ]
+  "type": "Program",
+  "body": [
+    {
+      "type": "IntegerLiteral",
+      "value": "42"
+    }
+  ]
 }
 ```
 
@@ -51,13 +51,13 @@ Results in the following AST:
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "FloatLiteral",
-            "value": "00034.29786"
-        }
-    ]
+  "type": "Program",
+  "body": [
+    {
+      "type": "FloatLiteral",
+      "value": "00034.29786"
+    }
+  ]
 }
 ```
 
@@ -73,21 +73,21 @@ Results in the following AST:
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "BinaryExpression",
-            "left": {
-                "type": "IntegerLiteral",
-                "value": "1 "
-            },
-            "right": {
-                "type": "IntegerLiteral",
-                "value": "2"
-            },
-            "operator": "+"
-        }
-    ]
+  "type": "Program",
+  "body": [
+    {
+      "type": "BinaryExpression",
+      "left": {
+        "type": "IntegerLiteral",
+        "value": "1 "
+      },
+      "right": {
+        "type": "IntegerLiteral",
+        "value": "2"
+      },
+      "operator": "+"
+    }
+  ]
 }
 ```
 
@@ -99,29 +99,29 @@ Complex example with precedence:
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "BinaryExpression",
-            "left": {
-                "type": "IntegerLiteral",
-                "value": "1 "
-            },
-            "right": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "IntegerLiteral",
-                    "value": "2 "
-                },
-                "right": {
-                    "type": "IntegerLiteral",
-                    "value": "3"
-                },
-                "operator": "*"
-            },
-            "operator": "+"
-        }
-    ]
+  "type": "Program",
+  "body": [
+    {
+      "type": "BinaryExpression",
+      "left": {
+        "type": "IntegerLiteral",
+        "value": "1 "
+      },
+      "right": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "IntegerLiteral",
+          "value": "2 "
+        },
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "3"
+        },
+        "operator": "*"
+      },
+      "operator": "+"
+    }
+  ]
 }
 ```
 
@@ -138,18 +138,18 @@ Results in the following AST:
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "IntegerLiteral",
-            "value": "42"
-        },
-        {
-            "type": "PrintOut",
-            "value": {
-                "type": "LastExpression"
-            }
-        }
-    ]
+  "type": "Program",
+  "body": [
+    {
+      "type": "IntegerLiteral",
+      "value": "42"
+    },
+    {
+      "type": "PrintOut",
+      "value": {
+        "type": "LastExpression"
+      }
+    }
+  ]
 }
 ```

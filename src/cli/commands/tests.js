@@ -5,10 +5,10 @@
  * all tests or takes the given phase and executes all phases that came before
  * as well. So if `phase-02` is given it will execute `phase-01,phase-02`.
  */
-'use strict';
+"use strict";
 
-const path = require('path');
-const jest = require('jest');
+const path = require("path");
+const jest = require("jest");
 
 /**
  * Create an array of phases as range to target phase
@@ -17,9 +17,9 @@ const jest = require('jest');
  * @return {string[]} Phase range
  */
 function createPhaseRange(toPhase) {
-    return Array(toPhase)
-        .fill('')
-        .map((_, index) => `phase-${String(index + 1).padStart(2, '0')}`);
+  return Array(toPhase)
+    .fill("")
+    .map((_, index) => `phase-${String(index + 1).padStart(2, "0")}`);
 }
 
 /**
@@ -29,27 +29,27 @@ function createPhaseRange(toPhase) {
  * @return {Promise<void>}
  */
 module.exports = async function test({ test, ensure }) {
-    const jestArgs = [];
+  const jestArgs = [];
 
-    if (typeof test === 'string') {
-        const arg =
-            test === 'compiler'
-                ? test
-                : createPhaseRange(parseInt(test.split('-')[1], 10)).join('|');
-        jestArgs.push(arg);
-    }
+  if (typeof test === "string") {
+    const arg =
+      test === "compiler"
+        ? test
+        : createPhaseRange(parseInt(test.split("-")[1], 10)).join("|");
+    jestArgs.push(arg);
+  }
 
-    // Use reference implementation
-    if (ensure) {
-        const setupTestsFilePath = path.resolve(
-            __dirname,
-            '../../parser/__mocks__/setup.js'
-        );
+  // Use reference implementation
+  if (ensure) {
+    const setupTestsFilePath = path.resolve(
+      __dirname,
+      "../../parser/__mocks__/setup.js"
+    );
 
-        jestArgs.push(`--setupTestFrameworkScriptFile=${setupTestsFilePath}`);
+    jestArgs.push(`--setupTestFrameworkScriptFile=${setupTestsFilePath}`);
 
-        process.env.STREX_LANG_ENSURE = '1';
-    }
+    process.env.STREX_LANG_ENSURE = "1";
+  }
 
-    return jest.run(jestArgs);
+  return jest.run(jestArgs);
 };

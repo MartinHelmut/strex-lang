@@ -6,7 +6,7 @@ This is the eighth phase to implement the parser for _StrexLang_.
 
 ### Syntax goal
 
--   **Human readable error messages**
+- **Human readable error messages**
 
 ### Test
 

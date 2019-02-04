@@ -4,12 +4,12 @@
  * This command is to execute strex files. The result will be written to the
  * standard output.
  */
-'use strict';
+"use strict";
 
-const { promisify } = require('util');
-const fs = require('fs');
+const { promisify } = require("util");
+const fs = require("fs");
 
-const compiler = require('../../compiler');
+const compiler = require("../../compiler");
 
 const statAsync = promisify(fs.stat);
 const readFileAsync = promisify(fs.readFile);
@@ -21,8 +21,8 @@ const readFileAsync = promisify(fs.readFile);
  * @return {Promise<string>}
  */
 module.exports = async function execute({ execute, ensure }) {
-    if (await statAsync(execute)) {
-        const fileContent = await readFileAsync(execute);
-        return compiler(fileContent, ensure);
-    }
+  if (await statAsync(execute)) {
+    const fileContent = await readFileAsync(execute);
+    return compiler(fileContent, ensure);
+  }
 };
