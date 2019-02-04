@@ -8,12 +8,12 @@ The _StrexLang_ ("Strange expression language") is only used to train regular ex
 
 ## Contents
 
--   [Goal](#goal)
--   [Language](#language)
--   [How to start](#how-to-start)
-    -   [Installation](#installation)
-    -   [Start development](#start-development)
-    -   [Phases](#phases)
+- [Goal](#goal)
+- [Language](#language)
+- [How to start](#how-to-start)
+  - [Installation](#installation)
+  - [Start development](#start-development)
+  - [Phases](#phases)
 
 ---
 

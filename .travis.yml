@@ -1,9 +1,9 @@
 language: node_js
 node_js:
-    - 'node'
-    - 8
+  - "10"
+  - 8
 install:
-    - npm install
+  - npm install
 script:
-    - npm run lint
-    - npm test -- --ensure
+  - npm run lint
+  - npm test -- --ensure

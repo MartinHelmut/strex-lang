@@ -1,7 +1,7 @@
 /**
  * Modify me!
  */
-'use strict';
+"use strict";
 
 /**
  * This file defines the parser and should be modified to produce an AST like
@@ -20,15 +20,15 @@
  * @return {Object} AST in a JSON serializable format
  */
 module.exports = function parser(input) {
-    const body = [];
+  const body = [];
 
-    // Do what you have to do with `input` to generate the AST. Try to use the
-    // string function `.replace` with a regular expression, split the string
-    // or if you want to you can try to create a tokenizer.
-    // START HERE ...
+  // Do what you have to do with `input` to generate the AST. Try to use the
+  // string function `.replace` with a regular expression, split the string
+  // or if you want to you can try to create a tokenizer.
+  // START HERE ...
 
-    return {
-        type: 'Program',
-        body
-    };
+  return {
+    type: "Program",
+    body
+  };
 };

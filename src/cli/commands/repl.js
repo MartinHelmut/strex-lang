@@ -5,11 +5,11 @@
  *
  * REPL: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
  */
-'use strict';
+"use strict";
 
-const os = require('os');
-const replServer = require('repl');
-const compiler = require('../../compiler');
+const os = require("os");
+const replServer = require("repl");
+const compiler = require("../../compiler");
 
 /**
  * The StrexLang REPL (Read–eval–print loop).
@@ -18,26 +18,26 @@ const compiler = require('../../compiler');
  * @return {Promise<void>} Resolves to the evaluated expression.
  */
 module.exports = async function repl({ ensure }) {
-    let lines = [];
+  let lines = [];
 
-    return new Promise((resolve, reject) => {
-        const server = replServer.start({
-            eval: line => {
-                try {
-                    if (line === os.EOL) {
-                        const result = compiler(lines.join(''), ensure);
-                        lines = [];
-                        console.log(result);
-                    }
+  return new Promise((resolve, reject) => {
+    const server = replServer.start({
+      eval: line => {
+        try {
+          if (line === os.EOL) {
+            const result = compiler(lines.join(""), ensure);
+            lines = [];
+            console.log(result);
+          }
 
-                    lines.push(line);
-                } catch (exception) {
-                    reject(exception);
-                }
-            },
-            writer: output => output
-        });
-
-        server.on('exit', resolve);
+          lines.push(line);
+        } catch (exception) {
+          reject(exception);
+        }
+      },
+      writer: output => output
     });
+
+    server.on("exit", resolve);
+  });
 };

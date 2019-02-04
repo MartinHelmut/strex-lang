@@ -4,8 +4,8 @@ This is the ninth phase to implement the parser for _StrexLang_.
 
 ### Syntax goal
 
--   **Last expression** syntax
--   **Multi line**
+- **Last expression** syntax
+- **Multi line**
 
 ### Test
 
@@ -24,32 +24,32 @@ The "last expression" is the value evaluated the line before. If no last express
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "BinaryExpression",
-            "left": {
-                "type": "IntegerLiteral",
-                "value": "4"
-            },
-            "right": {
-                "type": "IntegerLiteral",
-                "value": "3"
-            },
-            "operator": "+"
-        },
-        {
-            "type": "BinaryExpression",
-            "left": {
-                "type": "LastExpression"
-            },
-            "right": {
-                "type": "IntegerLiteral",
-                "value": "2"
-            },
-            "operator": "-"
-        }
-    ]
+  "type": "Program",
+  "body": [
+    {
+      "type": "BinaryExpression",
+      "left": {
+        "type": "IntegerLiteral",
+        "value": "4"
+      },
+      "right": {
+        "type": "IntegerLiteral",
+        "value": "3"
+      },
+      "operator": "+"
+    },
+    {
+      "type": "BinaryExpression",
+      "left": {
+        "type": "LastExpression"
+      },
+      "right": {
+        "type": "IntegerLiteral",
+        "value": "2"
+      },
+      "operator": "-"
+    }
+  ]
 }
 ```
 
@@ -65,59 +65,59 @@ As many lines as needed can be used to write StrexLang expressions. By referenci
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "BinaryExpression",
-            "left": {
-                "type": "IntegerLiteral",
-                "value": "4"
-            },
-            "right": {
-                "type": "IntegerLiteral",
-                "value": "3"
-            },
-            "operator": "+"
+  "type": "Program",
+  "body": [
+    {
+      "type": "BinaryExpression",
+      "left": {
+        "type": "IntegerLiteral",
+        "value": "4"
+      },
+      "right": {
+        "type": "IntegerLiteral",
+        "value": "3"
+      },
+      "operator": "+"
+    },
+    {
+      "type": "IfExpression",
+      "test": {
+        "type": "BooleanExpression",
+        "left": {
+          "type": "LastExpression"
         },
-        {
-            "type": "IfExpression",
-            "test": {
-                "type": "BooleanExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": {
-                    "type": "IntegerLiteral",
-                    "value": "7"
-                },
-                "operator": "="
-            },
-            "consequent": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "LastExpression"
-                },
-                "right": {
-                    "type": "IntegerLiteral",
-                    "value": "2"
-                },
-                "operator": "-"
-            },
-            "alternate": {
-                "type": "LastExpression"
-            }
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "7"
         },
-        {
-            "type": "BinaryExpression",
-            "left": {
-                "type": "LastExpression"
-            },
-            "right": {
-                "type": "IntegerLiteral",
-                "value": "3"
-            },
-            "operator": "*"
-        }
-    ]
+        "operator": "="
+      },
+      "consequent": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "LastExpression"
+        },
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "2"
+        },
+        "operator": "-"
+      },
+      "alternate": {
+        "type": "LastExpression"
+      }
+    },
+    {
+      "type": "BinaryExpression",
+      "left": {
+        "type": "LastExpression"
+      },
+      "right": {
+        "type": "IntegerLiteral",
+        "value": "3"
+      },
+      "operator": "*"
+    }
+  ]
 }
 ```

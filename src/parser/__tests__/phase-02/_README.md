@@ -4,8 +4,8 @@ This is the second phase to implement the parser for _StrexLang_.
 
 ### Syntax goal
 
--   **Combined types** uses integer and float in one expression
--   **Braces** to change the precedence of expressions
+- **Combined types** uses integer and float in one expression
+- **Braces** to change the precedence of expressions
 
 ### Test
 
@@ -23,21 +23,21 @@ Integer and float numbers can be used together and always result in float number
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "BinaryExpression",
-            "left": {
-                "type": "IntegerLiteral",
-                "value": "2 "
-            },
-            "right": {
-                "type": "FloatLiteral",
-                "value": "4.2"
-            },
-            "operator": "+"
-        }
-    ]
+  "type": "Program",
+  "body": [
+    {
+      "type": "BinaryExpression",
+      "left": {
+        "type": "IntegerLiteral",
+        "value": "2 "
+      },
+      "right": {
+        "type": "FloatLiteral",
+        "value": "4.2"
+      },
+      "operator": "+"
+    }
+  ]
 }
 ```
 
@@ -51,36 +51,36 @@ Braces can be used in arithmetic to define precedence.
 
 ```json
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "BinaryExpression",
-            "left": {
-                "type": "BinaryExpression",
-                "left": {
-                    "type": "FloatLiteral",
-                    "value": "2.2 "
-                },
-                "right": {
-                    "type": "BinaryExpression",
-                    "left": {
-                        "type": "IntegerLiteral",
-                        "value": "2 "
-                    },
-                    "right": {
-                        "type": "FloatLiteral",
-                        "value": "3.0"
-                    },
-                    "operator": "+"
-                },
-                "operator": "*"
-            },
-            "right": {
-                "type": "IntegerLiteral",
-                "value": "4"
-            },
-            "operator": "/"
-        }
-    ]
+  "type": "Program",
+  "body": [
+    {
+      "type": "BinaryExpression",
+      "left": {
+        "type": "BinaryExpression",
+        "left": {
+          "type": "FloatLiteral",
+          "value": "2.2 "
+        },
+        "right": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "IntegerLiteral",
+            "value": "2 "
+          },
+          "right": {
+            "type": "FloatLiteral",
+            "value": "3.0"
+          },
+          "operator": "+"
+        },
+        "operator": "*"
+      },
+      "right": {
+        "type": "IntegerLiteral",
+        "value": "4"
+      },
+      "operator": "/"
+    }
+  ]
 }
 ```

@@ -5,24 +5,24 @@
  * AST can also produce real values. Also this enables you to directly test your
  * implementation by producing a value rather an AST.
  */
-'use strict';
+"use strict";
 
-const Decimal = require('decimal.js');
+const Decimal = require("decimal.js");
 
 const TYPE = {
-    PROGRAM: 'Program',
-    PRINT_OUT: 'PrintOut',
-    INTEGER_LITERAL: 'IntegerLiteral',
-    FLOAT_LITERAL: 'FloatLiteral',
-    BINARY_EXPRESSION: 'BinaryExpression',
-    BOOLEAN_EXPRESSION: 'BooleanExpression',
-    LAST_EXPRESSION: 'LastExpression',
-    IF_EXPRESSION: 'IfExpression'
+  PROGRAM: "Program",
+  PRINT_OUT: "PrintOut",
+  INTEGER_LITERAL: "IntegerLiteral",
+  FLOAT_LITERAL: "FloatLiteral",
+  BINARY_EXPRESSION: "BinaryExpression",
+  BOOLEAN_EXPRESSION: "BooleanExpression",
+  LAST_EXPRESSION: "LastExpression",
+  IF_EXPRESSION: "IfExpression"
 };
 
 const BOOLEAN_OPERATOR = {
-    AND: '&',
-    OR: '|'
+  AND: "&",
+  OR: "|"
 };
 
 /**
@@ -32,17 +32,17 @@ const BOOLEAN_OPERATOR = {
  * @return {string}
  */
 function getOperationName(operator) {
-    const METHOD_MAPPING = {
-        '+': 'plus',
-        '-': 'minus',
-        '*': 'times',
-        '/': 'dividedBy',
-        '=': 'equals',
-        '>': 'greaterThan',
-        '<': 'lessThan'
-    };
+  const METHOD_MAPPING = {
+    "+": "plus",
+    "-": "minus",
+    "*": "times",
+    "/": "dividedBy",
+    "=": "equals",
+    ">": "greaterThan",
+    "<": "lessThan"
+  };
 
-    return METHOD_MAPPING[operator];
+  return METHOD_MAPPING[operator];
 }
 
 /**
@@ -54,11 +54,11 @@ function getOperationName(operator) {
  * @return {boolean}
  */
 function evaluateAndExpression(evaluation, test, index) {
-    const { left, right } = test;
-    const leftExpression = evaluateBooleanExpression(evaluation, left, index);
-    const rightExpression = evaluateBooleanExpression(evaluation, right, index);
+  const { left, right } = test;
+  const leftExpression = evaluateBooleanExpression(evaluation, left, index);
+  const rightExpression = evaluateBooleanExpression(evaluation, right, index);
 
-    return Boolean(leftExpression && rightExpression);
+  return Boolean(leftExpression && rightExpression);
 }
 
 /**
@@ -70,12 +70,10 @@ function evaluateAndExpression(evaluation, test, index) {
  * @return {boolean}
  */
 function evaluateOrExpression(evaluation, test, index) {
-    const { left, right } = test;
-    const leftExpression = evaluateBooleanExpression(evaluation, left, index);
+  const { left, right } = test;
+  const leftExpression = evaluateBooleanExpression(evaluation, left, index);
 
-    return (
-        leftExpression || evaluateBooleanExpression(evaluation, right, index)
-    );
+  return leftExpression || evaluateBooleanExpression(evaluation, right, index);
 }
 
 /**
@@ -87,31 +85,27 @@ function evaluateOrExpression(evaluation, test, index) {
  * @return {boolean}
  */
 function evaluateBooleanExpression(evaluation, test, index) {
-    const lineNumber = index + 1;
-    const { type, left, right, operator } = test;
+  const lineNumber = index + 1;
+  const { type, left, right, operator } = test;
 
-    if (type !== TYPE.BOOLEAN_EXPRESSION) {
-        throw new SyntaxError(
-            `Please use a boolean expression for tests in line ${lineNumber}`
-        );
-    }
+  if (type !== TYPE.BOOLEAN_EXPRESSION) {
+    throw new SyntaxError(
+      `Please use a boolean expression for tests in line ${lineNumber}`
+    );
+  }
 
-    switch (operator) {
-        case BOOLEAN_OPERATOR.AND:
-            return evaluateAndExpression(evaluation, test, index);
-        case BOOLEAN_OPERATOR.OR:
-            return evaluateOrExpression(evaluation, test, index);
-        default:
-            const leftExpression = evaluateExpression(evaluation, left, index);
-            const rightExpression = evaluateExpression(
-                evaluation,
-                right,
-                index
-            );
-            const method = getOperationName(operator);
+  switch (operator) {
+    case BOOLEAN_OPERATOR.AND:
+      return evaluateAndExpression(evaluation, test, index);
+    case BOOLEAN_OPERATOR.OR:
+      return evaluateOrExpression(evaluation, test, index);
+    default:
+      const leftExpression = evaluateExpression(evaluation, left, index);
+      const rightExpression = evaluateExpression(evaluation, right, index);
+      const method = getOperationName(operator);
 
-            return leftExpression[method](rightExpression);
-    }
+      return leftExpression[method](rightExpression);
+  }
 }
 
 /**
@@ -123,33 +117,29 @@ function evaluateBooleanExpression(evaluation, test, index) {
  * @return {Decimal}
  */
 function evaluateExpression(evaluation, line, index) {
-    switch (line.type) {
-        case TYPE.INTEGER_LITERAL:
-        case TYPE.FLOAT_LITERAL:
-            return new Decimal(line.value);
-        case TYPE.LAST_EXPRESSION:
-        case TYPE.PRINT_OUT:
-            return evaluation;
-        case TYPE.BINARY_EXPRESSION:
-            const { left, right, operator } = line;
-            const leftExpression = evaluateExpression(evaluation, left, index);
-            const rightExpression = evaluateExpression(
-                evaluation,
-                right,
-                index
-            );
-            const method = getOperationName(operator);
+  switch (line.type) {
+    case TYPE.INTEGER_LITERAL:
+    case TYPE.FLOAT_LITERAL:
+      return new Decimal(line.value);
+    case TYPE.LAST_EXPRESSION:
+    case TYPE.PRINT_OUT:
+      return evaluation;
+    case TYPE.BINARY_EXPRESSION:
+      const { left, right, operator } = line;
+      const leftExpression = evaluateExpression(evaluation, left, index);
+      const rightExpression = evaluateExpression(evaluation, right, index);
+      const method = getOperationName(operator);
 
-            return leftExpression[method](rightExpression);
-        case TYPE.IF_EXPRESSION:
-            const { test, consequent, alternate } = line;
+      return leftExpression[method](rightExpression);
+    case TYPE.IF_EXPRESSION:
+      const { test, consequent, alternate } = line;
 
-            return evaluateBooleanExpression(evaluation, test, index)
-                ? evaluateExpression(evaluation, consequent, index)
-                : evaluateExpression(evaluation, alternate, index);
-        default:
-            return evaluation;
-    }
+      return evaluateBooleanExpression(evaluation, test, index)
+        ? evaluateExpression(evaluation, consequent, index)
+        : evaluateExpression(evaluation, alternate, index);
+    default:
+      return evaluation;
+  }
 }
 
 /**
@@ -159,14 +149,12 @@ function evaluateExpression(evaluation, line, index) {
  * @return {string} Evaluated expression
  */
 module.exports = function compiler(input, ensure = false) {
-    const parser = ensure
-        ? require('../parser/__mocks__')
-        : require('../parser');
-    const ast = parser(input);
+  const parser = ensure ? require("../parser/__mocks__") : require("../parser");
+  const ast = parser(input);
 
-    if (ast.type !== TYPE.PROGRAM) {
-        throw new TypeError('Invalid input generated by parser.');
-    }
+  if (ast.type !== TYPE.PROGRAM) {
+    throw new TypeError("Invalid input generated by parser.");
+  }
 
-    return ast.body.reduce(evaluateExpression, new Decimal('0')).toFixed();
+  return ast.body.reduce(evaluateExpression, new Decimal("0")).toFixed();
 };

@@ -8,10 +8,10 @@ You want do something for this repo? Nice and easy! And of course: you are the b
 
 If you report a bug, please try to:
 
--   Perform a web / GitHub search to avoid creating a duplicate ticket.
--   Include enough information to reproduce the problem.
--   Mention the exact version of the project causing you problems, as well as any related software and versions (such as operating system, browser, etc.).
--   Test against the latest version of the project (and if possible also the master branch) to see if the problem has already been fixed.
+- Perform a web / GitHub search to avoid creating a duplicate ticket.
+- Include enough information to reproduce the problem.
+- Mention the exact version of the project causing you problems, as well as any related software and versions (such as operating system, browser, etc.).
+- Test against the latest version of the project (and if possible also the master branch) to see if the problem has already been fixed.
 
 Once you have tried the above, create a GitHub issue notifying your bug report.
 
@@ -19,8 +19,8 @@ Once you have tried the above, create a GitHub issue notifying your bug report.
 
 If you want to contribute code, please:
 
--   Write [good commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), explain what your patch does, and why it is needed. How to is described in the [Commit changes chapter](#commit-changes).
--   Keep it simple: Any patch that changes a lot of code or is difficult to understand should be discussed before you put in the effort.
+- Write [good commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), explain what your patch does, and why it is needed. How to is described in the [Commit changes chapter](#commit-changes).
+- Keep it simple: Any patch that changes a lot of code or is difficult to understand should be discussed before you put in the effort.
 
 Once you have tried the above, create a GitHub pull request with your changes changes and feel awesome 🎉.
 
