@@ -34,7 +34,7 @@
     "jest": "23.6.0",
     "pegjs": "0.10.0",
     "prettier": "1.16.4",
-    "standard-version": "4.4.0"
+    "standard-version": "5.0.0"
   },
   "dependencies": {
     "decimal.js": "10.0.2"
