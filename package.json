@@ -29,7 +29,7 @@
     "commander": "2.19.0",
     "eslint": "5.14.1",
     "eslint-config-google": "0.12.0",
-    "eslint-config-prettier": "4.0.0",
+    "eslint-config-prettier": "4.1.0",
     "eslint-plugin-prettier": "3.0.1",
     "jest": "23.6.0",
     "pegjs": "0.10.0",
