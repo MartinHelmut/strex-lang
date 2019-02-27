@@ -37,6 +37,6 @@
     "standard-version": "5.0.0"
   },
   "dependencies": {
-    "decimal.js": "10.0.2"
+    "decimal.js": "10.1.1"
   }
 }
