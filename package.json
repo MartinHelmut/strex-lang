@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "commander": "2.19.0",
-    "eslint": "5.15.3",
+    "eslint": "5.16.0",
     "eslint-config-google": "0.12.0",
     "eslint-config-prettier": "4.1.0",
     "eslint-plugin-prettier": "3.0.1",
