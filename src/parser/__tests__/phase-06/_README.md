@@ -37,11 +37,21 @@ The `|` or-operator can be used to test against multiple boolean expressions whe
           },
           "right": {
             "type": "IntegerLiteral",
-            "value": "1 "
+            "value": "1"
           },
           "operator": "="
         },
-        "right": undefined,
+        "right": {
+          "type": "BooleanExpression",
+          "left": {
+            "type": "LastExpression"
+          },
+          "right": {
+            "type": "IntegerLiteral",
+            "value": "3"
+          },
+          "operator": ">"
+        },
         "operator": "|"
       },
       "consequent": {
@@ -49,12 +59,10 @@ The `|` or-operator can be used to test against multiple boolean expressions whe
         "left": {
           "type": "LastExpression"
         },
-        "right": [
-          {
-            "type": "IntegerLiteral",
-            "value": "2 "
-          }
-        ],
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "2"
+        },
         "operator": "+"
       },
       "alternate": {
@@ -62,12 +70,10 @@ The `|` or-operator can be used to test against multiple boolean expressions whe
         "left": {
           "type": "LastExpression"
         },
-        "right": [
-          {
-            "type": "IntegerLiteral",
-            "value": "3"
-          }
-        ],
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "3"
+        },
         "operator": "/"
       }
     }
@@ -98,11 +104,21 @@ The `&` and-operator can be used to test against multiple boolean expressions th
           },
           "right": {
             "type": "IntegerLiteral",
-            "value": "4 "
+            "value": "4"
           },
           "operator": "<"
         },
-        "right": undefined,
+        "right": {
+          "type": "BooleanExpression",
+          "left": {
+            "type": "LastExpression"
+          },
+          "right": {
+            "type": "IntegerLiteral",
+            "value": "1"
+          },
+          "operator": ">"
+        },
         "operator": "&"
       },
       "consequent": {
@@ -110,12 +126,10 @@ The `&` and-operator can be used to test against multiple boolean expressions th
         "left": {
           "type": "LastExpression"
         },
-        "right": [
-          {
-            "type": "IntegerLiteral",
-            "value": "3 "
-          }
-        ],
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "3"
+        },
         "operator": "*"
       },
       "alternate": {
@@ -123,12 +137,10 @@ The `&` and-operator can be used to test against multiple boolean expressions th
         "left": {
           "type": "LastExpression"
         },
-        "right": [
-          {
-            "type": "IntegerLiteral",
-            "value": "4"
-          }
-        ],
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "4"
+        },
         "operator": "/"
       }
     }
@@ -161,14 +173,34 @@ This is the combination of or- and and-operator for if-expressions.
             },
             "right": {
               "type": "IntegerLiteral",
-              "value": "1 "
+              "value": "1"
             },
             "operator": ">"
           },
-          "right": undefined,
+          "right": {
+            "type": "BooleanExpression",
+            "left": {
+              "type": "LastExpression"
+            },
+            "right": {
+              "type": "IntegerLiteral",
+              "value": "4"
+            },
+            "operator": "<"
+          },
           "operator": "&"
         },
-        "right": undefined,
+        "right": {
+          "type": "BooleanExpression",
+          "left": {
+            "type": "LastExpression"
+          },
+          "right": {
+            "type": "IntegerLiteral",
+            "value": "42"
+          },
+          "operator": "="
+        },
         "operator": "|"
       },
       "consequent": {
@@ -176,12 +208,10 @@ This is the combination of or- and and-operator for if-expressions.
         "left": {
           "type": "LastExpression"
         },
-        "right": [
-          {
-            "type": "IntegerLiteral",
-            "value": "1 "
-          }
-        ],
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "1"
+        },
         "operator": "+"
       },
       "alternate": {
@@ -189,12 +219,10 @@ This is the combination of or- and and-operator for if-expressions.
         "left": {
           "type": "LastExpression"
         },
-        "right": [
-          {
-            "type": "IntegerLiteral",
-            "value": "1"
-          }
-        ],
+        "right": {
+          "type": "IntegerLiteral",
+          "value": "1"
+        },
         "operator": "-"
       }
     }
