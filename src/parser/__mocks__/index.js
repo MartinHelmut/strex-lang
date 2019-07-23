@@ -1,7 +1,7 @@
 /**
  * Please don't modify!
  *
- * This is a mock file to test the tests and compiler.
+ * This is a mock file to test phases and the compiler.
  */
 "use strict";
 

@@ -4,13 +4,13 @@
 "use strict";
 
 /**
- * This file defines the parser and should be modified to produce an AST like
+ * This file defines the parser and should be modified to produce an AST, like
  * mentioned in the README.md and covered by the tests provided. These tests
  * can be executed with `npm test`.
  *
- * To execute a single phase execute `npm test -- phase-01`. The implementation
+ * To execute a single phase run `npm test -- phase-01`. The implementation
  * should be done phase by phase. Every phase provides a readme with further
- * guidance, e.g. for phase one under `src/parser/__tests__/phase-01/_README.md`
+ * guidance, e.g. for phase one under `src/parser/__tests__/phase-01/README.md`
  */
 
 /**
