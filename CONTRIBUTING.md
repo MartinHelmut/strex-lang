@@ -32,27 +32,27 @@ Tested with Node 8 and NPM 5 and up.
 
 Clone the repo and run an install:
 
-```shell
-$ git clone git@github.com:MartinHelmut/strex-lang.git && cd strex-lang && npm i
+```bash
+git clone git@github.com:MartinHelmut/strex-lang.git && cd strex-lang && npm i
 ```
 
 ### Tests
 
 Tests are written in [Jest][jturl]. To run all tests execute
 
-```shell
-$ npm test
+```bash
+npm test
 ```
 
 and to lint all the code:
 
-```shell
-$ npm run lint
+```bash
+npm run lint
 ```
 
-If you want to ensure that the tests and compiler work against a reference implementation you can execute:
+If you want to ensure that the tests and compiler work against a reference implementation, you can execute:
 
-```shell
+```bash
 npm test -- --ensure
 ```
 
@@ -62,24 +62,13 @@ npm test -- --ensure
 
 Checkout a new branch, e.g.:
 
-```shell
-$ git checkout -b do-something
+```bash
+git checkout -b do-something
 ```
 
 **There is no specific naming convention for branches.**
 
 Add your changes with a proper and commitizen friendly message. Create a "Pull Request" on Github and be awesome! 😎
-
-## Recommended workflow for release
-
-1.  Make changes
-2.  Commit those changes
-3.  Make sure all tests turn green
-4.  Create a new release with `npm run release`
-5.  Push your release `git push --follow-tags origin master`
-6.  **Done!**
-
-For more information on building a release see [https://github.com/conventional-changelog/standard-version][sv]
 
 ## Be Nice
 

@@ -1,7 +1,7 @@
 {
   "name": "strex-lang",
   "version": "0.1.0",
-  "description": "The *StrexLang* (\"Strange expression language\") is used to train regular expressions and parser design for JavaScript in a hopefully not so boring way.",
+  "description": "The *StrexLang* (\"Strange expression language\") is used to train regular expressions in JavaScript. Also a bit of parser design in a hopefully not so boring way.",
   "bin": "src/cli/index.js",
   "private": true,
   "scripts": {
