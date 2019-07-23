@@ -9,7 +9,7 @@
 
 ### Example
 
-_StrexLang_ is a very small language without any functions. It contains of expressions and returns the last evaluated expression. Here is an example how it works:
+_StrexLang_ is a very small language without functions. It contains expressions and returns the last evaluated. Here is an example how it works:
 
 ```strex
 // This is a comment
@@ -22,7 +22,7 @@ _StrexLang_ is a very small language without any functions. It contains of expre
 
 1. This is just a comment and will be ignored for the AST
 2. Calculate `4 + 3`, this is `7`
-3. Use the last evaluated expression `7` and check if it equals `7`, if so add `5`, if not calculate minus `4`
+3. Use the last evaluated expression `7`, and check if it equals `7`, if so add `5`, if not calculate minus `4`
 4. Use the last evaluated expression and calculate minus `2`
 5. Empty line: print this statement to console
 
