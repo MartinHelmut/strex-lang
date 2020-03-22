@@ -13,15 +13,15 @@ describe("parser > types > integer", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
             right: {
               type: "IntegerLiteral",
-              value: "0"
+              value: "0",
             },
-            operator: "/"
-          }
-        ]
+            operator: "/",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);

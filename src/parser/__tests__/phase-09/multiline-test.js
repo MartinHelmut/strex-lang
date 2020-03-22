@@ -13,26 +13,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "3"
+              value: "3",
             },
-            operator: "+"
-          }
-        ]
+            operator: "+",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -48,26 +48,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "3"
+              value: "3",
             },
-            operator: "+"
-          }
-        ]
+            operator: "+",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -83,37 +83,37 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "5"
+              value: "5",
             },
             right: {
               type: "IntegerLiteral",
-              value: "3"
+              value: "3",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
-            operator: "-"
-          }
-        ]
+            operator: "-",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -129,37 +129,37 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "5"
+              value: "5",
             },
             right: {
               type: "IntegerLiteral",
-              value: "3"
+              value: "3",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
-            operator: "-"
-          }
-        ]
+            operator: "-",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -173,20 +173,20 @@ describe("parser > base > multiline", () => {
         body: [
           {
             type: "IntegerLiteral",
-            value: "42"
+            value: "42",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "5"
+              value: "5",
             },
-            operator: "*"
-          }
-        ]
+            operator: "*",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -200,20 +200,20 @@ describe("parser > base > multiline", () => {
         body: [
           {
             type: "IntegerLiteral",
-            value: "42"
+            value: "42",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "5"
+              value: "5",
             },
-            operator: "*"
-          }
-        ]
+            operator: "*",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -229,26 +229,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "36"
+              value: "36",
             },
             right: {
               type: "IntegerLiteral",
-              value: "6"
+              value: "6",
             },
-            operator: "/"
+            operator: "/",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "3"
+              value: "3",
             },
-            operator: "/"
-          }
-        ]
+            operator: "/",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -264,26 +264,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "36"
+              value: "36",
             },
             right: {
               type: "IntegerLiteral",
-              value: "6"
+              value: "6",
             },
-            operator: "/"
+            operator: "/",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "3"
+              value: "3",
             },
-            operator: "/"
-          }
-        ]
+            operator: "/",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -299,48 +299,48 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "5"
+              value: "5",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "10"
+              value: "10",
             },
-            operator: "*"
+            operator: "*",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "/"
-          }
-        ]
+            operator: "/",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -356,48 +356,48 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "5"
+              value: "5",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "10"
+              value: "10",
             },
-            operator: "*"
+            operator: "*",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "/"
-          }
-        ]
+            operator: "/",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -413,26 +413,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "1.2"
+              value: "1.2",
             },
             right: {
               type: "FloatLiteral",
-              value: "44.01"
+              value: "44.01",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "5.0"
+              value: "5.0",
             },
-            operator: "+"
-          }
-        ]
+            operator: "+",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -448,26 +448,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "1.2"
+              value: "1.2",
             },
             right: {
               type: "FloatLiteral",
-              value: "44.01"
+              value: "44.01",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "5.0"
+              value: "5.0",
             },
-            operator: "+"
-          }
-        ]
+            operator: "+",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -483,26 +483,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "10.5"
+              value: "10.5",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.5"
+              value: "0.5",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "4.10"
+              value: "4.10",
             },
-            operator: "-"
-          }
-        ]
+            operator: "-",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -518,26 +518,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "10.5"
+              value: "10.5",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.5"
+              value: "0.5",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "4.10"
+              value: "4.10",
             },
-            operator: "-"
-          }
-        ]
+            operator: "-",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -553,26 +553,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "0.5"
+              value: "0.5",
             },
             right: {
               type: "FloatLiteral",
-              value: "1.5"
+              value: "1.5",
             },
-            operator: "*"
+            operator: "*",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "4.0"
+              value: "4.0",
             },
-            operator: "*"
-          }
-        ]
+            operator: "*",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -588,26 +588,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "0.5"
+              value: "0.5",
             },
             right: {
               type: "FloatLiteral",
-              value: "1.5"
+              value: "1.5",
             },
-            operator: "*"
+            operator: "*",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "4.0"
+              value: "4.0",
             },
-            operator: "*"
-          }
-        ]
+            operator: "*",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -623,26 +623,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "2.0"
+              value: "2.0",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.5"
+              value: "0.5",
             },
-            operator: "/"
+            operator: "/",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.5"
+              value: "0.5",
             },
-            operator: "/"
-          }
-        ]
+            operator: "/",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -658,26 +658,26 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "2.0"
+              value: "2.0",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.5"
+              value: "0.5",
             },
-            operator: "/"
+            operator: "/",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.5"
+              value: "0.5",
             },
-            operator: "/"
-          }
-        ]
+            operator: "/",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -693,48 +693,48 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "4.2"
+              value: "4.2",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.1"
+              value: "0.1",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "5.0"
+              value: "5.0",
             },
-            operator: "*"
+            operator: "*",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "001.5"
+              value: "001.5",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.1"
+              value: "0.1",
             },
-            operator: "/"
-          }
-        ]
+            operator: "/",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -750,48 +750,48 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "4.2"
+              value: "4.2",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.1"
+              value: "0.1",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "5.0"
+              value: "5.0",
             },
-            operator: "*"
+            operator: "*",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "001.5"
+              value: "001.5",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.1"
+              value: "0.1",
             },
-            operator: "/"
-          }
-        ]
+            operator: "/",
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -809,51 +809,51 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "IfExpression",
             test: {
               type: "BooleanExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "3"
+                value: "3",
               },
-              operator: "="
+              operator: "=",
             },
             consequent: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "5"
+                value: "5",
               },
-              operator: "*"
+              operator: "*",
             },
             alternate: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "2"
+                value: "2",
               },
-              operator: "/"
-            }
-          }
-        ]
+              operator: "/",
+            },
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -869,51 +869,51 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "IfExpression",
             test: {
               type: "BooleanExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "3"
+                value: "3",
               },
-              operator: "="
+              operator: "=",
             },
             consequent: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "5"
+                value: "5",
               },
-              operator: "*"
+              operator: "*",
             },
             alternate: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "2"
+                value: "2",
               },
-              operator: "/"
-            }
-          }
-        ]
+              operator: "/",
+            },
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -929,13 +929,13 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "IfExpression",
@@ -944,87 +944,87 @@ describe("parser > base > multiline", () => {
               left: {
                 type: "BooleanExpression",
                 left: {
-                  type: "LastExpression"
+                  type: "LastExpression",
                 },
                 right: {
                   type: "IntegerLiteral",
-                  value: "0"
+                  value: "0",
                 },
-                operator: ">"
+                operator: ">",
               },
               right: {
                 type: "BooleanExpression",
                 left: {
-                  type: "LastExpression"
+                  type: "LastExpression",
                 },
                 right: {
                   type: "IntegerLiteral",
-                  value: "5"
+                  value: "5",
                 },
-                operator: "<"
+                operator: "<",
               },
-              operator: "|"
+              operator: "|",
             },
             consequent: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "1"
+                value: "1",
               },
-              operator: "-"
+              operator: "-",
             },
             alternate: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "1"
+                value: "1",
               },
-              operator: "+"
-            }
+              operator: "+",
+            },
           },
           {
             type: "IfExpression",
             test: {
               type: "BooleanExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "1"
+                value: "1",
               },
-              operator: "="
+              operator: "=",
             },
             consequent: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "0"
+                value: "0",
               },
-              operator: "+"
+              operator: "+",
             },
             alternate: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "100"
+                value: "100",
               },
-              operator: "-"
-            }
-          }
-        ]
+              operator: "-",
+            },
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -1040,13 +1040,13 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "IfExpression",
@@ -1055,87 +1055,87 @@ describe("parser > base > multiline", () => {
               left: {
                 type: "BooleanExpression",
                 left: {
-                  type: "LastExpression"
+                  type: "LastExpression",
                 },
                 right: {
                   type: "IntegerLiteral",
-                  value: "0"
+                  value: "0",
                 },
-                operator: ">"
+                operator: ">",
               },
               right: {
                 type: "BooleanExpression",
                 left: {
-                  type: "LastExpression"
+                  type: "LastExpression",
                 },
                 right: {
                   type: "IntegerLiteral",
-                  value: "5"
+                  value: "5",
                 },
-                operator: "<"
+                operator: "<",
               },
-              operator: "|"
+              operator: "|",
             },
             consequent: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "1"
+                value: "1",
               },
-              operator: "-"
+              operator: "-",
             },
             alternate: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "1"
+                value: "1",
               },
-              operator: "+"
-            }
+              operator: "+",
+            },
           },
           {
             type: "IfExpression",
             test: {
               type: "BooleanExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "1"
+                value: "1",
               },
-              operator: "="
+              operator: "=",
             },
             consequent: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "0"
+                value: "0",
               },
-              operator: "+"
+              operator: "+",
             },
             alternate: {
               type: "BinaryExpression",
               left: {
-                type: "LastExpression"
+                type: "LastExpression",
               },
               right: {
                 type: "IntegerLiteral",
-                value: "100"
+                value: "100",
               },
-              operator: "-"
-            }
-          }
-        ]
+              operator: "-",
+            },
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -1153,32 +1153,32 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "3"
+              value: "3",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "PrintOut",
             value: {
-              type: "LastExpression"
-            }
-          }
-        ]
+              type: "LastExpression",
+            },
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -1194,32 +1194,32 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "1"
+              value: "1",
             },
             right: {
               type: "IntegerLiteral",
-              value: "2"
+              value: "2",
             },
-            operator: "+"
+            operator: "+",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "3"
+              value: "3",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "PrintOut",
             value: {
-              type: "LastExpression"
-            }
-          }
-        ]
+              type: "LastExpression",
+            },
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -1235,61 +1235,61 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "4"
+              value: "4",
             },
             right: {
               type: "IntegerLiteral",
-              value: "6"
+              value: "6",
             },
-            operator: "*"
+            operator: "*",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "42"
+              value: "42",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "PrintOut",
             value: {
-              type: "LastExpression"
-            }
+              type: "LastExpression",
+            },
           },
           {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "9.5"
+              value: "9.5",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.5"
+              value: "0.5",
             },
-            operator: "/"
+            operator: "/",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "4"
+              value: "4",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "PrintOut",
             value: {
-              type: "LastExpression"
-            }
-          }
-        ]
+              type: "LastExpression",
+            },
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);
@@ -1305,61 +1305,61 @@ describe("parser > base > multiline", () => {
             type: "BinaryExpression",
             left: {
               type: "IntegerLiteral",
-              value: "4"
+              value: "4",
             },
             right: {
               type: "IntegerLiteral",
-              value: "6"
+              value: "6",
             },
-            operator: "*"
+            operator: "*",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "42"
+              value: "42",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "PrintOut",
             value: {
-              type: "LastExpression"
-            }
+              type: "LastExpression",
+            },
           },
           {
             type: "BinaryExpression",
             left: {
               type: "FloatLiteral",
-              value: "9.5"
+              value: "9.5",
             },
             right: {
               type: "FloatLiteral",
-              value: "0.5"
+              value: "0.5",
             },
-            operator: "/"
+            operator: "/",
           },
           {
             type: "BinaryExpression",
             left: {
-              type: "LastExpression"
+              type: "LastExpression",
             },
             right: {
               type: "IntegerLiteral",
-              value: "4"
+              value: "4",
             },
-            operator: "-"
+            operator: "-",
           },
           {
             type: "PrintOut",
             value: {
-              type: "LastExpression"
-            }
-          }
-        ]
+              type: "LastExpression",
+            },
+          },
+        ],
       };
 
       expect(ast).toEqual(expected);

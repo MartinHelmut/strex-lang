@@ -15,13 +15,13 @@ const grammar = fs.readFileSync(
 );
 const parser = peg.generate(grammar);
 
-module.exports = function(input) {
+module.exports = function (input) {
   try {
     return parser.parse(input);
   } catch (exception) {
     const {
       location: { start },
-      message
+      message,
     } = exception;
 
     throw new SyntaxError(
