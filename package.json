@@ -19,11 +19,55 @@
     "test",
     "training"
   ],
-  "author": "Martin Helmut Fieber <info@martin-fieber.de> (https://martin-fieber.de)",
+  "author": "Martin Helmut Fieber <info@martin-fieber.se> (https://martin-fieber.se)",
   "license": "MIT",
   "engines": {
-    "node": ">=8",
-    "npm": ">=5"
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "eslintConfig": {
+    "extends": [
+      "google",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "renovate": {
+    "extends": [
+      "config:base"
+    ],
+    "supportPolicy": [
+      "lts_latest"
+    ],
+    "dependencies": {
+      "semanticPrefix": "chore:",
+      "semanticCommitScope": ""
+    },
+    "pin": {
+      "semanticPrefix": "chore:",
+      "semanticCommitScope": ""
+    },
+    "semanticPrefix": "chore:",
+    "semanticCommitScope": "",
+    "packageRules": [
+      {
+        "updateTypes": [
+          "minor",
+          "patch",
+          "pin",
+          "digest"
+        ],
+        "automerge": true
+      }
+    ]
   },
   "devDependencies": {
     "commander": "5.0.0",

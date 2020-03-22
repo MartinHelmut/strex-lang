@@ -17,12 +17,12 @@ const TYPE = {
   BINARY_EXPRESSION: "BinaryExpression",
   BOOLEAN_EXPRESSION: "BooleanExpression",
   LAST_EXPRESSION: "LastExpression",
-  IF_EXPRESSION: "IfExpression"
+  IF_EXPRESSION: "IfExpression",
 };
 
 const BOOLEAN_OPERATOR = {
   AND: "&",
-  OR: "|"
+  OR: "|",
 };
 
 /**
@@ -39,7 +39,7 @@ function getOperationName(operator) {
     "/": "dividedBy",
     "=": "equals",
     ">": "greaterThan",
-    "<": "lessThan"
+    "<": "lessThan",
   };
 
   return METHOD_MAPPING[operator];

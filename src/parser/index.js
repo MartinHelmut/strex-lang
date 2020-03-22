@@ -29,6 +29,6 @@ module.exports = function parser(input) {
 
   return {
     type: "Program",
-    body
+    body,
   };
 };

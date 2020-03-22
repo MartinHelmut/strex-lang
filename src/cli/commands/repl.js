@@ -22,7 +22,7 @@ module.exports = async function repl({ ensure }) {
 
   return new Promise((resolve, reject) => {
     const server = replServer.start({
-      eval: line => {
+      eval: (line) => {
         try {
           if (line === os.EOL) {
             const result = compiler(lines.join(""), ensure);
@@ -35,7 +35,7 @@ module.exports = async function repl({ ensure }) {
           reject(exception);
         }
       },
-      writer: output => output
+      writer: (output) => output,
     });
 
     server.on("exit", resolve);

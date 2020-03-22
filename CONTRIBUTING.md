@@ -1,6 +1,6 @@
 # Contributing
 
-You want do something for this repo? Nice and easy! And of course: you are the best!
+You want do something for this repo? Nice! And of course: you are the best!
 
 ## Issues
 
@@ -26,13 +26,13 @@ Once you have tried the above, create a GitHub pull request with your changes ch
 
 ### Environment
 
-Tested with Node 8 and NPM 5 and up.
+Tested with Node 10 and NPM 6 and up.
 
 ### Setup
 
 Clone the repo and run an install:
 
-```bash
+```shell script
 git clone git@github.com:MartinHelmut/strex-lang.git && cd strex-lang && npm i
 ```
 
@@ -40,19 +40,19 @@ git clone git@github.com:MartinHelmut/strex-lang.git && cd strex-lang && npm i
 
 Tests are written in [Jest][jturl]. To run all tests execute
 
-```bash
+```shell script
 npm test
 ```
 
 and to lint all the code:
 
-```bash
+```shell script
 npm run lint
 ```
 
 If you want to ensure that the tests and compiler work against a reference implementation, you can execute:
 
-```bash
+```shell script
 npm test -- --ensure
 ```
 
@@ -62,7 +62,7 @@ npm test -- --ensure
 
 Checkout a new branch, e.g.:
 
-```bash
+```shell script
 git checkout -b do-something
 ```
 
