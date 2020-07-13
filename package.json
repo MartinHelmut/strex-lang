@@ -78,7 +78,7 @@
     "jest": "26.1.0",
     "pegjs": "0.10.0",
     "prettier": "2.0.5",
-    "standard-version": "8.0.0"
+    "standard-version": "8.0.1"
   },
   "dependencies": {
     "decimal.js": "10.2.0"
