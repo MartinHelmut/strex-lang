@@ -81,6 +81,6 @@
     "standard-version": "9.0.0"
   },
   "dependencies": {
-    "decimal.js": "10.2.0"
+    "decimal.js": "10.2.1"
   }
 }
