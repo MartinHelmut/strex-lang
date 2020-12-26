@@ -9,8 +9,8 @@
     "test": "node src/cli --test",
     "lint": "eslint '**/*.js'",
     "release": "standard-version",
-    "format": "prettier --write \"**/*.{js,css,md,json,yml}\"",
-    "format:check": "prettier --list-different \"**/*.{js,css,md,json,yml}\""
+    "format": "prettier --write .",
+    "format:check": "prettier --list-different ."
   },
   "keywords": [
     "strexlang",
