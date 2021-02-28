@@ -8,7 +8,7 @@
  */
 "use strict";
 
-const commander = require("commander");
+const { Command } = require("commander");
 const pkg = require("../../package.json");
 
 const test = require("./commands/tests");
@@ -18,23 +18,26 @@ const repl = require("./commands/repl");
 const print = console.log;
 
 (async function cli() {
-  commander
+  const program = new Command();
+  program
     .version(pkg.version, "-v, --version")
     .option("-x, --execute <input>", "Execute a strex file")
     .option("-t, --test [phase]", "Run tests for phases")
     .option("-e, --ensure", "Execute with reference implementation")
     .parse(process.argv);
 
+  const options = program.opts();
+
   try {
-    if (commander.test) {
-      return print(await test(commander));
+    if (options.test) {
+      return print(await test(options));
     }
 
-    if (commander.execute) {
-      return print(await execute(commander));
+    if (options.execute) {
+      return print(await execute(options));
     }
 
-    return await repl(commander);
+    return await repl(options);
   } catch (exception) {
     console.error(exception.message);
     process.exit(1);
