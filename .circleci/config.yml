@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: "node:14"
+      - image: "node:16"
     steps:
       - checkout
       - restore_cache:
