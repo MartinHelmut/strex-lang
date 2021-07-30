@@ -1,6 +1,6 @@
 # StrexLang
 
-[![Build Status](https://travis-ci.com/MartinHelmut/strex-lang.svg?branch=main)](https://travis-ci.com/MartinHelmut/strex-lang)
+[![Build Status](https://circleci.com/gh/MartinHelmut/strex-lang/tree/main.svg?style=shield)](https://circleci.com/gh/MartinHelmut/strex-lang/tree/main)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
