@@ -46,7 +46,7 @@ module.exports = async function test({ test, ensure }) {
       "../../parser/__mocks__/setup.js"
     );
 
-    jestArgs.push(`--setupTestFrameworkScriptFile=${setupTestsFilePath}`);
+    jestArgs.push(`--setupFilesAfterEnv=${setupTestsFilePath}`);
 
     process.env.STREX_LANG_ENSURE = "1";
   }
