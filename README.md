@@ -4,6 +4,8 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
+**Update:** I will no longer maintain this project. Nevertheless, it is still usable and can serve the same purpose.
+
 _StrexLang_ ("Strange expression language") is used to train regular expressions in JavaScript. Also a bit of parser design in a hopefully not so boring way. It is a project where a mentor and trainee can work together in a predefined environment.
 
 ## Contents
